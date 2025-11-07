@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DataMate</title><link>https://modelengine-ai.net/en/</link><description>Recent content on DataMate</description><generator>Hugo</generator><language>en</language><atom:link href="https://modelengine-ai.net/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview</title><link>https://modelengine-ai.net/en/docs/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/en/docs/overview/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DataMate</title><link>https://modelengine-group.github.io/datamate-docs/en/</link><description>Recent content on DataMate</description><generator>Hugo</generator><language>en</language><atom:link href="https://modelengine-group.github.io/datamate-docs/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/overview/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -12,21 +12,21 @@ User Guide).&lt;/p&gt;
 &lt;p&gt;Introduce your project, including what it does or lets you do, why you would use
 it, and its primary goal (and how it achieves it). This should be similar to
 your README description, though you can go into a little more detail here if you
-want.&lt;/p&gt;</description></item><item><title>Example Page</title><link>https://modelengine-ai.net/en/docs/getting-started/example-page/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/en/docs/getting-started/example-page/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+want.&lt;/p&gt;</description></item><item><title>Example Page</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/example-page/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/example-page/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;This is a placeholder page. Replace it with your own content.&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;p&gt;Text can be &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, or &lt;del&gt;strikethrough&lt;/del&gt;. &lt;a href="https://gohugo.io"&gt;Links&lt;/a&gt; should be blue with no underlines (unless hovered over).&lt;/p&gt;
-&lt;p&gt;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade. Yuccie prism four dollar toast tbh cardigan iPhone, tumblr listicle live-edge VHS. Pug lyft normcore hot chicken biodiesel, actually keffiyeh thundercats photo booth pour-over twee fam food truck microdosing banh mi. Vice activated charcoal raclette unicorn live-edge post-ironic. Heirloom vexillologist coloring book, beard deep v letterpress echo park humblebrag tilde.&lt;/p&gt;</description></item><item><title>DataMate</title><link>https://modelengine-ai.net/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/en/about/</guid><description>&lt;link rel="preload" as="image" href="https://modelengine-ai.net/en/about/featured-background_hu_28321b97b64c41b4.jpg" media="(max-width: 1200px)"&gt;
-&lt;link rel="preload" as="image" href="https://modelengine-ai.net/en/about/featured-background_hu_c8311343381f0dbc.jpg" media="(min-width: 1200px)"&gt;
+&lt;p&gt;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade. Yuccie prism four dollar toast tbh cardigan iPhone, tumblr listicle live-edge VHS. Pug lyft normcore hot chicken biodiesel, actually keffiyeh thundercats photo booth pour-over twee fam food truck microdosing banh mi. Vice activated charcoal raclette unicorn live-edge post-ironic. Heirloom vexillologist coloring book, beard deep v letterpress echo park humblebrag tilde.&lt;/p&gt;</description></item><item><title>DataMate</title><link>https://modelengine-group.github.io/datamate-docs/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/about/</guid><description>&lt;link rel="preload" as="image" href="https://modelengine-group.github.io/datamate-docs/en/about/featured-background_hu_28321b97b64c41b4.jpg" media="(max-width: 1200px)"&gt;
+&lt;link rel="preload" as="image" href="https://modelengine-group.github.io/datamate-docs/en/about/featured-background_hu_c8311343381f0dbc.jpg" media="(min-width: 1200px)"&gt;
 &lt;style&gt;
 #td-cover-block-0 {
- background-image: url(/en/about/featured-background_hu_28321b97b64c41b4.jpg);
+ background-image: url(/datamate-docs/en/about/featured-background_hu_28321b97b64c41b4.jpg);
 }
 @media only screen and (min-width: 1200px) {
  #td-cover-block-0 {
- background-image: url(/en/about/featured-background_hu_c8311343381f0dbc.jpg);
+ background-image: url(/datamate-docs/en/about/featured-background_hu_c8311343381f0dbc.jpg);
  }
 }
 &lt;/style&gt;
@@ -53,4 +53,4 @@ want.&lt;/p&gt;</description></item><item><title>Example Page</title><link>https
 &lt;div class="col-12"&gt;
 &lt;div class="container text-center td-arrow-down"&gt;
 &lt;div class="h4 mb-0"&gt;
-&lt;p&gt;DataMate is an enterprise-grade data processing system designed specifically for &lt;strong&gt;model training, AI application development, and data flywheel&lt;/strong&gt; operation scenarios. It integrates multi-modal data management, high-performance data processing, and comprehensive data services into a unified platform, helping industry clients efficiently complete end-to-end data processing, transformation, and governance workflows.&lt;/p&gt;</description></item><item><title>Search Results</title><link>https://modelengine-ai.net/en/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/en/search/</guid><description/></item></channel></rss>
+&lt;p&gt;DataMate is an enterprise-grade data processing system designed specifically for &lt;strong&gt;model training, AI application development, and data flywheel&lt;/strong&gt; operation scenarios. It integrates multi-modal data management, high-performance data processing, and comprehensive data services into a unified platform, helping industry clients efficiently complete end-to-end data processing, transformation, and governance workflows.&lt;/p&gt;</description></item><item><title>Search Results</title><link>https://modelengine-group.github.io/datamate-docs/en/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/search/</guid><description/></item></channel></rss>
