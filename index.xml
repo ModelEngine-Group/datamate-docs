@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DataMate</title><link>https://modelengine-ai.net/</link><description>Recent content on DataMate</description><generator>Hugo</generator><language>zh</language><atom:link href="https://modelengine-ai.net/index.xml" rel="self" type="application/rss+xml"/><item><title>概述</title><link>https://modelengine-ai.net/docs/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/docs/overview/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;欢迎大家使用 DataMate！DataMate 是一个开源的数据治理解决方案，旨在帮助企业高效管理和利用数据资产。
+无论您是数据管理员、数据分析师，还是业务用户，DataMate 都能为您提供强大的工具和功能，助力您的数据驱动决策。
+如果您在使用过程中有任何问题或建议，欢迎访问我们的 &lt;a href="https://github.com/ModelEngine-Group/DataMate"&gt;GitHub 主页&lt;/a&gt; 提交 issue 或参与讨论。
+让我们一起打造更好的数据治理体验！&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="主要功能"&gt;主要功能&lt;a class="td-heading-self-link" href="#%e4%b8%bb%e8%a6%81%e5%8a%9f%e8%83%bd" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;数据目录管理：集中管理企业数据资产，支持数据分类、标签和搜索功能。&lt;/li&gt;
+&lt;li&gt;数据血缘分析：可视化展示数据流转过程，帮助用户理解数据来源和去向。&lt;/li&gt;
+&lt;li&gt;数据质量监控：实时监控数据质量指标，及时发现和处理数据问题。&lt;/li&gt;
+&lt;li&gt;权限管理：细粒度的权限控制，确保数据安全合规。&lt;/li&gt;
+&lt;li&gt;报表与分析：提供丰富的数据报表和分析工具，支持多维度数据洞察。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://modelengine-ai.net/docs/getting-started/"&gt;快速开始&lt;/a&gt;: 快速安装和配置DataMate&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>贡献指南</title><link>https://modelengine-ai.net/docs/contribution-guidelines/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/docs/contribution-guidelines/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;DataMate 是企业级数据处理开源项目，致力于为模型训练、AI
+应用、数据飞轮等场景提供高效数据解决方案。我们欢迎所有开发者、文档创作者、测试工程师通过代码提交、文档优化、问题反馈、社区支持等方式参与贡献。&lt;/p&gt;
+&lt;p&gt;若你是首次参与开源项目，建议先阅读 &lt;a href="https://opensource.guide/zh-hans/how-to-contribute/"&gt;开源贡献新手&lt;/a&gt;
+，再结合本指南开展操作。所有贡献均需遵循 &lt;a href=""&gt;DataMate 行为准则&lt;/a&gt;。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="一贡献范围与方式"&gt;一、贡献范围与方式&lt;a class="td-heading-self-link" href="#%e4%b8%80%e8%b4%a1%e7%8c%ae%e8%8c%83%e5%9b%b4%e4%b8%8e%e6%96%b9%e5%bc%8f" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;DataMate 开源项目的贡献覆盖以下核心场景，你可根据自身擅长领域选择参与方向：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;贡献类型&lt;/th&gt;
+ &lt;th&gt;具体内容&lt;/th&gt;
+ &lt;th&gt;适合人群&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;代码贡献&lt;/td&gt;
+ &lt;td&gt;核心功能开发、Bug 修复、性能优化、新特性提案&lt;/td&gt;
+ &lt;td&gt;后端 / 前端开发者、数据工程师&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;文档贡献&lt;/td&gt;
+ &lt;td&gt;用户手册更新、API 文档完善、教程编写、贡献指南优化&lt;/td&gt;
+ &lt;td&gt;技术文档创作者、资深用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;测试贡献&lt;/td&gt;
+ &lt;td&gt;编写单元测试 / 集成测试、反馈测试问题、参与兼容性测试&lt;/td&gt;
+ &lt;td&gt;测试工程师、质量保障人员&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;社区贡献&lt;/td&gt;
+ &lt;td&gt;解答 GitHub Issues、参与社区讨论、分享使用案例&lt;/td&gt;
+ &lt;td&gt;所有用户、技术爱好者&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;设计贡献&lt;/td&gt;
+ &lt;td&gt;界面交互优化、Logo / 图标设计、文档视觉升级&lt;/td&gt;
+ &lt;td&gt;UI/UX 设计师、视觉设计师&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;感谢你选择参与 DataMate 开源项目的建设！无论是代码、文档还是社区支持，每一份贡献都将助力项目成长，推动企业级数据处理技术的发展。若在贡献过程中遇到任何问题，欢迎随时通过社区渠道寻求帮助。&lt;/p&gt;</description></item><item><title>docker compose 安装</title><link>https://modelengine-ai.net/docs/getting-started/example-page/</link><pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/docs/getting-started/example-page/</guid><description>&lt;h1 id="文档完善中敬请期待"&gt;文档完善中，敬请期待～&lt;a class="td-heading-self-link" href="#%e6%96%87%e6%a1%a3%e5%ae%8c%e5%96%84%e4%b8%ad%e6%95%ac%e8%af%b7%e6%9c%9f%e5%be%85" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;</description></item><item><title>关于 DataMate</title><link>https://modelengine-ai.net/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/about/</guid><description>&lt;link rel="preload" as="image" href="https://modelengine-ai.net/about/featured-background_hu_28321b97b64c41b4.jpg" media="(max-width: 1200px)"&gt;
+&lt;link rel="preload" as="image" href="https://modelengine-ai.net/about/featured-background_hu_c8311343381f0dbc.jpg" media="(min-width: 1200px)"&gt;
+&lt;style&gt;
+#td-cover-block-0 {
+ background-image: url(/about/featured-background_hu_28321b97b64c41b4.jpg);
+}
+@media only screen and (min-width: 1200px) {
+ #td-cover-block-0 {
+ background-image: url(/about/featured-background_hu_c8311343381f0dbc.jpg);
+ }
+}
+&lt;/style&gt;
+&lt;section id="td-cover-block-0" class="row td-cover-block td-cover-block--height-auto js-td-cover td-overlay td-overlay--dark -bg-dark"&gt;
+ &lt;div class="col-12"&gt;
+ &lt;div class="container td-overlay__inner"&gt;
+ &lt;div class="text-center"&gt;
+ &lt;h1 class="display-1 mt-0 mt-md-5 pb-4"&gt;关于 DataMate&lt;/h1&gt;
+ 
+ &lt;div class="pt-3 lead"&gt;
+ 
+ &lt;p class="mt-5"&gt;助力 AI 创新与数据驱动增长的企业级数据处理核心引擎&lt;/p&gt;
+
+ 
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+&lt;/section&gt;
+
+&lt;div&gt;&lt;a id="td-block-1" class="td-offset-anchor"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;section class="row td-box td-box--1 position-relative td-box--height-auto"&gt;
+&lt;div class="col-12"&gt;
+&lt;div class="container text-center td-arrow-down"&gt;
+&lt;div class="h4 mb-0"&gt;
+&lt;p&gt;DataMate 是一款专为&lt;strong&gt;模型训练、AI 应用开发与数据飞轮&lt;/strong&gt;
+运营场景打造的企业级数据处理系统。它将多模态数据管理、高性能数据处理与全方位数据服务整合于统一平台，助力行业客户高效完成端到端的数据处理、加工与治理流程。
+我们的核心使命是打破数据孤岛、加速 AI 落地进程、降低数据处理成本，帮助企业在智能时代充分释放数据资产的核心价值。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;div&gt;&lt;a id="td-block-2" class="td-offset-anchor"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;section class="row td-box td-box--2 td-box--height-auto"&gt;
+&lt;div class="col"&gt;
+&lt;div class="container"&gt;
+&lt;h1 class="text-center" id="核心能力"&gt;核心能力&lt;a class="td-heading-self-link" href="#%e6%a0%b8%e5%bf%83%e8%83%bd%e5%8a%9b" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;div&gt;&lt;a id="td-block-3" class="td-offset-anchor"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;section class="row td-box td-box--3 td-box--height-auto"&gt;
+&lt;div class="col"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-lg-4 mb-5 mb-lg-0 text-center"&gt;
+&lt;div class="mb-4 h1"&gt;
+ &lt;i class="fas fa-solid fa-database"&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;h4 class="h3"&gt;多模态数据管理&lt;/h4&gt;
+&lt;div class="mb-0"&gt;
+&lt;p&gt;无缝对接结构化、非结构化与半结构化数据（文本、图像、音频、视频等），内置数据分类、加密与版本控制功能，确保
+AI 开发全生命周期内的数据完整性与可访问性。&lt;/p&gt;</description></item><item><title>搜索结果</title><link>https://modelengine-ai.net/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/search/</guid><description/></item></channel></rss>

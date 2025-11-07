@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on DataMate</title><link>https://modelengine-ai.net/en/docs/</link><description>Recent content in Documentation on DataMate</description><generator>Hugo</generator><language>en</language><atom:link href="https://modelengine-ai.net/en/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview</title><link>https://modelengine-ai.net/en/docs/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-ai.net/en/docs/overview/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;This is a placeholder page that shows you how to use this template site.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;The Overview is where your users find out about your project. Depending on the
+size of your docset, you can have a separate overview page (like this one) or
+put your overview contents in the Documentation landing page (like in the Docsy
+User Guide).&lt;/p&gt;
+&lt;p&gt;Try answering these questions for your user in this page:&lt;/p&gt;
+&lt;h2 id="what-is-it"&gt;What is it?&lt;a class="td-heading-self-link" href="#what-is-it" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Introduce your project, including what it does or lets you do, why you would use
+it, and its primary goal (and how it achieves it). This should be similar to
+your README description, though you can go into a little more detail here if you
+want.&lt;/p&gt;</description></item></channel></rss>
