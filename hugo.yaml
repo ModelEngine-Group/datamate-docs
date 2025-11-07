@@ -56,9 +56,6 @@ languages:
     title: "DataMate"
     params:
       description: "一站式数据处理平台"
-      time_format_default: 2025.10.24
-      time_format_blog: 2025.10.24
-
 markup:
   goldmark:
     parser:
