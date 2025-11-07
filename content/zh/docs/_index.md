@@ -4,25 +4,4 @@ linkTitle: 文档
 menu: {main: {weight: 20}}
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
-
-This section is where the user documentation for your project lives - all the
-information your users need to understand and successfully use your project.
-
-For large documentation sets we recommend adding content under the headings in
-this section, though if some or all of them don’t apply to your project feel
-free to remove them or add your own. You can see an example of a smaller Docsy
-documentation site in the [Docsy User Guide](https://docsy.dev/docs/), which
-lives in the [Docsy theme
-repo](https://github.com/google/docsy/tree/master/userguide) if you'd like to
-copy its docs section.
-
-Other content such as marketing material, case studies, and community updates
-should live in the [About](/about/) and [Community](/community/) pages.
-
-Find out how to use the Docsy theme in the [Docsy User
-Guide](https://docsy.dev/docs/). You can learn more about how to organize your
-documentation (and how we organized this site) in [Organizing Your
-Content](https://docsy.dev/docs/best-practices/organizing-content/).
+欢迎阅读DataMate的官方文档。在这里，您将找到有关我们项目的详细信息、使用指南和技术资源，帮助您更好地理解和使用我们的产品。无论您是新手还是有经验的用户，我们的文档都旨在为您提供所需的信息和支持。请随时浏览各个章节，发现更多内容！

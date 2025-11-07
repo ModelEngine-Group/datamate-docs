@@ -1,48 +1,25 @@
 ---
-title: Overview
-description: Here's where your user finds out if your project is for them.
+title: 概述
+description: DataMate，一个开源的数据治理解决方案，帮助企业高效管理和利用数据资产。
 weight: 1
 ---
 
 {{% pageinfo %}}
 
-This is a placeholder page that shows you how to use this template site.
+欢迎大家使用 DataMate！DataMate 是一个开源的数据治理解决方案，旨在帮助企业高效管理和利用数据资产。
+无论您是数据管理员、数据分析师，还是业务用户，DataMate 都能为您提供强大的工具和功能，助力您的数据驱动决策。
+如果您在使用过程中有任何问题或建议，欢迎访问我们的 [GitHub 主页](https://github.com/ModelEngine-Group/DataMate) 提交 issue 或参与讨论。
+让我们一起打造更好的数据治理体验！
 
 {{% /pageinfo %}}
 
-The Overview is where your users find out about your project. Depending on the
-size of your docset, you can have a separate overview page (like this one) or
-put your overview contents in the Documentation landing page (like in the Docsy
-User Guide).
+## 主要功能
+- 数据目录管理：集中管理企业数据资产，支持数据分类、标签和搜索功能。
+- 数据血缘分析：可视化展示数据流转过程，帮助用户理解数据来源和去向。
+- 数据质量监控：实时监控数据质量指标，及时发现和处理数据问题。
+- 权限管理：细粒度的权限控制，确保数据安全合规。
+- 报表与分析：提供丰富的数据报表和分析工具，支持多维度数据洞察。
 
-Try answering these questions for your user in this page:
 
-## What is it?
-
-Introduce your project, including what it does or lets you do, why you would use
-it, and its primary goal (and how it achieves it). This should be similar to
-your README description, though you can go into a little more detail here if you
-want.
-
-## Why do I want it?
-
-Help your user know if your project will help them. Useful information can
-include:
-
-- **What is it good for?**: What types of problems does your project solve? What
-  are the benefits of using it?
-
-- **What is it not good for?**: For example, point out situations that might
-  intuitively seem suited for your project, but aren't for some reason. Also
-  mention known limitations, scaling issues, or anything else that might let
-  your users know if the project is not for them.
-
-- **What is it _not yet_ good for?**: Highlight any useful features that are
-  coming soon.
-
-## Where should I go next?
-
-Give your users next steps from the Overview. For example:
-
-- [Getting Started](/docs/getting-started/): Get started with $project
-- [Examples](/docs/examples/): Check out some example code!
+## 快速开始
+- [快速开始](/docs/getting-started/): 快速安装和配置DataMate

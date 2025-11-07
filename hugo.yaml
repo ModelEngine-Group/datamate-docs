@@ -52,6 +52,7 @@ languages:
       description: "All-in-one Data Processing Platform"
   zh:
     languageName: "中文 (Chinese)"
+    weight: 1
     contentDir: content/zh
     title: "DataMate"
     params:
@@ -146,7 +147,7 @@ params:
     # Enable to show the side bar menu in its compact state.
     sidebar_menu_compact: false
     # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
-    sidebar_search_disable: false
+    sidebar_search_disable: true
 
     # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
     # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.

@@ -10,26 +10,36 @@ weight: 2
 This is a placeholder page that shows you how to use this template site.
 {{% /pageinfo %}}
 
-Information in this section helps your user try your project themselves.
+# 前置条件
 
-* What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
+- Git (用于拉取源码)
+- Make (用于构建和安装)
+- Docker (用于构建镜像和部署服务)
+- Docker-Compose (用于部署服务-docker方式)
+- kubernetes (用于部署服务-k8s方式)
+- Helm (用于部署服务-k8s方式)
 
-* Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
+# 拉取代码
 
-Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
+```bash
+git clone git@github.com:ModelEngine-Group/DataMate.git
+cd DataMate
+```
 
-## Prerequisites
+# 镜像构建
 
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
+```bash
+make build
+```
 
-## Installation
+# Docker安装
 
-Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
+```bash
+make install INSTALLER=docker
+```
 
-## Setup
+# kubernetes安装
 
-Is there any initial setup users need to do after installation to try your project?
-
-## Try it out!
-
-Can your users test their installation, for example by running a command or deploying a Hello World example?
+```bash
+make install INSTALLER=k8s
+```
