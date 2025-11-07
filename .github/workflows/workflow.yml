@@ -1,0 +1,33 @@
+name: Deploy Hugo Site to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]  # 监听 main 分支的推送
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 拉取主题子模块
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'  # 使用最新版 Hugo
+          extended: true  # 启用 extended 版本
+
+      - name: Build site
+        run: hugo --minify  # 构建并压缩静态文件
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 自动生成的 Token
+          publish_dir: ./public  # 部署 public 目录
+          # 若部署到个人主页（yourname.github.io），需设置为 main 分支：
+          publish_branch: main
+          # 若部署到项目站点，默认部署到 gh-pages 分支，无需修改
