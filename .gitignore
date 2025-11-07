@@ -187,3 +187,10 @@ Thumbs.db
 .vscode/
 *.sublime-project
 *.sublime-workspace
+
+# 忽略hugo生成的public文件夹
+public/
+# 忽略hugo生成的资源文件夹
+resources/
+
+.hugo_build.lock

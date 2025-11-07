@@ -1,13 +1,13 @@
 {
-  "name": "docsy-example-site",
+  "name": "datamate-docs",
   "version": "0.12.0",
   "version.next": "0.12.1-dev-unreleased",
-  "description": "Example site that uses Docsy theme for technical documentation.",
-  "repository": "github:google/docsy-example",
-  "homepage": "https://example.docsy.dev",
-  "author": "Docsy Authors",
+  "description": "DataMate Documentation Site",
+  "repository": "https://github.com/ModelEngine-Group/datamate-docs",
+  "homepage": "https://datamate.dev",
+  "author": "DataMate Authors",
   "license": "Apache-2.0",
-  "bugs": "https://github.com/google/docsy-example/issues",
+  "bugs": "https://github.com/ModelEngine-Group/datamate-docs/issues",
   "spelling": "cSpell:ignore docsy hugo htmltest precheck postbuild rtlcss -",
   "scripts": {
     "_build": "npm run _hugo-dev --",
@@ -39,6 +39,7 @@
     "cross-env": "^7.0.3",
     "hugo-extended": "0.147.5",
     "postcss-cli": "^11.0.1",
+    "postcss": "^8.4.38",
     "rtlcss": "^4.3.0"
   },
   "optionalDependencies": {

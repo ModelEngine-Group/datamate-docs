@@ -3,7 +3,7 @@ title: DataMate
 ---
 
 {{< blocks/cover title="DataMate — 大模型数据处理的企业级首选平台！" image_anchor="top" height="full" >}}
-<a class="btn btn-lg btn-primary me-3 mb-4" href="/zh/docs/">
+<a class="btn btn-lg btn-primary me-3 mb-4" href="/datamate-docs/docs/">
   了解更多 <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="https://github.com/ModelEngine-Group/DataMate">

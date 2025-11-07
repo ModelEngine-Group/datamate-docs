@@ -1,4 +1,4 @@
-name: Deploy Hugo Site to GitHub Pages
+name: Deploy DataMate Website to GitHub Pages
 
 on:
   push:
@@ -20,6 +20,17 @@ jobs:
           hugo-version: 'latest'  # 使用最新版 Hugo
           extended: true  # 启用 extended 版本
 
+      # 新增步骤：安装 Node.js（PostCSS 依赖 Node 环境）
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # 使用稳定版本的 Node.js
+
+      # 新增步骤：安装 PostCSS 及相关依赖
+      - name: Install PostCSS
+        run: |
+          npm install
+
       - name: Build site
         run: hugo --minify  # 构建并压缩静态文件
 
@@ -29,5 +40,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # 自动生成的 Token
           publish_dir: ./public  # 部署 public 目录
           # 若部署到个人主页（yourname.github.io），需设置为 main 分支：
-          publish_branch: main
+          publish_branch: gh-pages
           # 若部署到项目站点，默认部署到 gh-pages 分支，无需修改
