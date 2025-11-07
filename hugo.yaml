@@ -168,19 +168,20 @@ params:
 
   links:
     # End user relevant links. These will show up on left side of footer and in the community page if you have one.
-#    user:
-#      - name: User mailing list
-#        url: https://example.org/mail
-#        icon: fa fa-envelope
-#        desc: Discussion and help from your fellow users
-#      - name: Twitter
-#        url: https://example.org/twitter
-#        icon: fab fa-twitter
-#        desc: Follow us on Twitter to get the latest news!
-#      - name: Stack Overflow
-#        url: https://example.org/stack
-#        icon: fab fa-stack-overflow
-#        desc: Practical questions and curated answers
+    user:
+      - name: ModelEngine
+        url: https://modelengine-ai.net/#/home
+        icon: fa fa-envelope
+        desc: ModelEngine 官方网站，了解更多信息！
+      - name: 魔擎
+        url: https://mp.weixin.qq.com/s/isymVYr_P8m0MY79MAyn_A
+        icon: fab fa-weixin
+        desc: 微信搜索“魔擎”关注我们的微信公众号，第一时间获取最新动态！
+      - name: GitHub
+        url: https://github.com/ModelEngine-Group/DataMate
+        icon: fab fa-github
+        desc: 项目的 GitHub 仓库，欢迎 Star 和贡献代码！
+
     # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
     developer:
       - name: ModelEngine
