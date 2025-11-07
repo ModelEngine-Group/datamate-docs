@@ -1,4 +1,4 @@
-name: Deploy Hugo Site to GitHub Pages
+name: Deploy DataMate Website to GitHub Pages
 
 on:
   push:
@@ -19,6 +19,17 @@ jobs:
         with:
           hugo-version: 'latest'  # 使用最新版 Hugo
           extended: true  # 启用 extended 版本
+
+      # 新增步骤：安装 Node.js（PostCSS 依赖 Node 环境）
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # 使用稳定版本的 Node.js
+
+      # 新增步骤：安装 PostCSS 及相关依赖
+      - name: Install PostCSS
+        run: |
+          npm install -g postcss postcss-cli   
 
       - name: Build site
         run: hugo --minify  # 构建并压缩静态文件
