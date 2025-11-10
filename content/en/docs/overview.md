@@ -10,14 +10,6 @@ DataMate simplifies end-to-end data management for AI-driven enterprises, combin
 
 {{% /pageinfo %}}
 
-# Overview
-description: Learn about DataMate, an enterprise-grade data processing system designed to empower AI applications and streamline data workflows.
-weight: 1
-
-{{% pageinfo %}}
-DataMate simplifies end-to-end data management for AI-driven enterprises, combining multi-modal support, high performance, and one-stop services to accelerate AI落地.
-{{% /pageinfo %}}
-
 ## What is it?
 DataMate is an enterprise-grade data processing system tailored for model training, AI applications, and data flywheel scenarios. It integrates multi-modal data management, high-performance data processing, and rich data service capabilities to provide industry customers with one-stop data handling—covering processing, refinement, and management. Its core goal is to boost data processing efficiency, reduce related costs, and facilitate the smooth implementation of enterprise AI applications.
 
