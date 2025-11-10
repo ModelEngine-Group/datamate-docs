@@ -3,16 +3,6 @@
 
 &lt;/div&gt;
 
-&lt;h1 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;description: Learn about DataMate, an enterprise-grade data processing system designed to empower AI applications and streamline data workflows.
-weight: 1&lt;/p&gt;
-
-
-&lt;div class="pageinfo pageinfo-primary"&gt;
-&lt;p&gt;DataMate simplifies end-to-end data management for AI-driven enterprises, combining multi-modal support, high performance, and one-stop services to accelerate AI落地.&lt;/p&gt;
-
-&lt;/div&gt;
-
 &lt;h2 id="what-is-it"&gt;What is it?&lt;a class="td-heading-self-link" href="#what-is-it" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;DataMate is an enterprise-grade data processing system tailored for model training, AI applications, and data flywheel scenarios. It integrates multi-modal data management, high-performance data processing, and rich data service capabilities to provide industry customers with one-stop data handling—covering processing, refinement, and management. Its core goal is to boost data processing efficiency, reduce related costs, and facilitate the smooth implementation of enterprise AI applications.&lt;/p&gt;</description></item><item><title>Example Page</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/example-page/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/example-page/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;This is a placeholder page. Replace it with your own content.&lt;/p&gt;
