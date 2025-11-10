@@ -1,48 +1,33 @@
 ---
 title: Overview
-description: Here's where your user finds out if your project is for them.
+description: Learn about DataMate, an enterprise-grade data processing system designed to empower AI applications and streamline data workflows.
 weight: 1
 ---
 
 {{% pageinfo %}}
 
-This is a placeholder page that shows you how to use this template site.
+DataMate simplifies end-to-end data management for AI-driven enterprises, combining multi-modal support, high performance, and one-stop services to accelerate your data workflows.
 
 {{% /pageinfo %}}
 
-The Overview is where your users find out about your project. Depending on the
-size of your docset, you can have a separate overview page (like this one) or
-put your overview contents in the Documentation landing page (like in the Docsy
-User Guide).
+# Overview
+description: Learn about DataMate, an enterprise-grade data processing system designed to empower AI applications and streamline data workflows.
+weight: 1
 
-Try answering these questions for your user in this page:
+{{% pageinfo %}}
+DataMate simplifies end-to-end data management for AI-driven enterprises, combining multi-modal support, high performance, and one-stop services to accelerate AI落地.
+{{% /pageinfo %}}
 
 ## What is it?
-
-Introduce your project, including what it does or lets you do, why you would use
-it, and its primary goal (and how it achieves it). This should be similar to
-your README description, though you can go into a little more detail here if you
-want.
+DataMate is an enterprise-grade data processing system tailored for model training, AI applications, and data flywheel scenarios. It integrates multi-modal data management, high-performance data processing, and rich data service capabilities to provide industry customers with one-stop data handling—covering processing, refinement, and management. Its core goal is to boost data processing efficiency, reduce related costs, and facilitate the smooth implementation of enterprise AI applications.
 
 ## Why do I want it?
+### What is it good for?
+- Solves complex data management challenges in AI workflows, including handling multi-modal data (e.g., text, image, audio) uniformly.
+- Enhances data processing speed with high-performance computing capabilities, shortening the cycle of model training and AI application development.
+- Reduces operational costs by replacing fragmented data tools with a unified platform, eliminating the need for multiple system integrations.
+- Supports end-to-end data operations, from collection to processing, management, and service provision, aligning with the closed-loop needs of data flywheels.
 
-Help your user know if your project will help them. Useful information can
-include:
-
-- **What is it good for?**: What types of problems does your project solve? What
-  are the benefits of using it?
-
-- **What is it not good for?**: For example, point out situations that might
-  intuitively seem suited for your project, but aren't for some reason. Also
-  mention known limitations, scaling issues, or anything else that might let
-  your users know if the project is not for them.
-
-- **What is it _not yet_ good for?**: Highlight any useful features that are
-  coming soon.
-
-## Where should I go next?
-
-Give your users next steps from the Overview. For example:
-
-- [Getting Started](/docs/getting-started/): Get started with $project
-- [Examples](/docs/examples/): Check out some example code!
+### What is it not good for?
+- Does not provide custom hardware integration services; it focuses on software-layer data processing and management.
+- Not optimized for real-time transactional data processing (e.g., high-frequency financial transactions) where ultra-low latency is the primary requirement.
