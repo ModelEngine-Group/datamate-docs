@@ -45,26 +45,38 @@ Click **Create Task** button.
 
 #### Step 3: Configure Basic Information
 
-- **Task name**: e.g., `user_data_collection`
-- **Task description**: Task purpose (optional)
-- **Data source type**: Select type (e.g., MySQL)
-- **Target dataset**: Select or create output dataset
+Fill in the following basic information:
 
-#### Step 4: Configure Data Source Connection
+- **Name**: A meaningful name for the task
+- **Timeout**: Task execution timeout (seconds)
+- **Description**: Task purpose (optional)
+
+#### Step 4: Select Sync Mode
+
+Select the task synchronization mode:
+
+- **Immediate Sync**: Execute once immediately after task creation
+- **Scheduled Sync**: Execute periodically according to schedule rules
+
+#### Step 5: Configure Data Source
+
+**Select data source type**: Choose from dropdown list (e.g., MySQL, CSV, etc.)
+
+**Configure data source parameters**: Fill in connection parameters based on the selected data source template (form format)
 
 **MySQL Example**:
-```json
-{
-  "host": "localhost",
-  "port": 3306,
-  "username": "root",
-  "password": "password",
-  "database": "mydb",
-  "table": "users"
-}
-```
+- JDBC URL: `jdbc:mysql://localhost:3306/mydb`
+- Username: `root`
+- Password: `password`
+- Table Name: `users`
 
-#### Step 5: Configure Field Mapping
+**CSV File Example**:
+- File Path: `/data/input.csv`
+- Encoding: `UTF-8`
+- Delimiter: `,`
+- Has Header: Yes/No
+
+#### Step 6: Configure Field Mapping
 
 Map source fields to target fields:
 
@@ -72,16 +84,40 @@ Map source fields to target fields:
 |-------------|--------------|-----------------|
 | id | user_id | Long → Long |
 | name | username | String → String |
+| email | email | String → String |
 
-#### Step 6: Create and Execute
+#### Step 7: Configure Execution Strategy
 
-Click **Create**. Task will start automatically if immediate execution is selected.
+- **Concurrency**: Number of concurrent channels (default 1)
+
+When selecting **Scheduled Sync**, configure schedule rules:
+
+- **Cron Expression**: e.g., `0 0 2 * * ?` for daily at 2 AM
+- Or use quick setup form:
+  - Frequency: Hourly / Daily / Weekly / Monthly
+  - Specific time: Select execution time point
+
+#### Step 8: Create and Execute
+
+Click **Create** button to create the task.
+- If **Immediate Sync** is selected, task starts immediately
+- If **Scheduled Sync** is selected, task runs periodically according to schedule
 
 ### 2. Monitor Task Execution
 
 View all collection tasks with status, progress, and operations.
 
-## Advanced Features
+### 3. Task Management
+
+Each task in the task list has the following actions available:
+
+- **View Execution Records**: View all historical executions of the task
+- **Delete**: Delete the task (note: deleting a task does not delete collected data)
+
+Click the task name to view task details including:
+- Basic configuration
+- Execution record list
+- Data statistics
 
 ### DataX Configuration Template
 
