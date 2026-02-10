@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>API 参考 on DataMate</title><link>https://modelengine-group.github.io/datamate-docs/docs/api-reference/</link><description>Recent content in API 参考 on DataMate</description><generator>Hugo</generator><language>zh</language><atom:link href="https://modelengine-group.github.io/datamate-docs/docs/api-reference/index.xml" rel="self" type="application/rss+xml"/><item><title>数据管理 API</title><link>https://modelengine-group.github.io/datamate-docs/docs/api-reference/data-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/api-reference/data-management/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;数据管理 API 提供数据集和文件的创建、查询、更新和删除功能。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="基础信息"&gt;基础信息&lt;a class="td-heading-self-link" href="#%e5%9f%ba%e7%a1%80%e4%bf%a1%e6%81%af" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Base URL&lt;/strong&gt;: &lt;code&gt;http://localhost:8092/api/v1/data-management&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;认证方式&lt;/strong&gt;: JWT / API Key&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Content-Type&lt;/strong&gt;: &lt;code&gt;application/json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="数据集管理"&gt;数据集管理&lt;a class="td-heading-self-link" href="#%e6%95%b0%e6%8d%ae%e9%9b%86%e7%ae%a1%e7%90%86" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="获取数据集列表"&gt;获取数据集列表&lt;a class="td-heading-self-link" href="#%e8%8e%b7%e5%8f%96%e6%95%b0%e6%8d%ae%e9%9b%86%e5%88%97%e8%a1%a8" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-http" data-lang="http"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt;GET /data-management/datasets?page=0&amp;amp;size=20&amp;amp;type=text&amp;amp;status=ACTIVE
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;查询参数&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;参数&lt;/th&gt;
+ &lt;th&gt;类型&lt;/th&gt;
+ &lt;th&gt;必填&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;page&lt;/td&gt;
+ &lt;td&gt;integer&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;td&gt;页码，从 0 开始，默认 0&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;size&lt;/td&gt;
+ &lt;td&gt;integer&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;td&gt;每页大小，默认 20&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;type&lt;/td&gt;
+ &lt;td&gt;string&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;td&gt;数据集类型过滤&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;tags&lt;/td&gt;
+ &lt;td&gt;string&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;td&gt;标签过滤，逗号分隔&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;keyword&lt;/td&gt;
+ &lt;td&gt;string&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;td&gt;关键词搜索&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;status&lt;/td&gt;
+ &lt;td&gt;string&lt;/td&gt;
+ &lt;td&gt;否&lt;/td&gt;
+ &lt;td&gt;状态过滤&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;响应示例&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;dataset-001&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;text_dataset&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;文本数据集&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;TEXT&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;文本&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;supportedFormats&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;txt&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;md&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;json&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;ACTIVE&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;tags&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;tag-001&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;training&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;color&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;#FF0000&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;fileCount&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;1000&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;totalSize&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;1073741824&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;completionRate&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;85.5&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;createdAt&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;2024-01-15T10:00:00Z&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;createdBy&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;admin&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;page&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;0&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;size&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;20&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;totalElements&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;totalPages&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;first&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;last&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="创建数据集"&gt;创建数据集&lt;a class="td-heading-self-link" href="#%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e9%9b%86" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-http" data-lang="http"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt;POST /data-management/datasets
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt;Content-Type: application/json
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt; &amp;#34;name&amp;#34;: &amp;#34;my_dataset&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt; &amp;#34;description&amp;#34;: &amp;#34;My dataset description&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt; &amp;#34;type&amp;#34;: &amp;#34;TEXT&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt; &amp;#34;tags&amp;#34;: [&amp;#34;training&amp;#34;, &amp;#34;nlp&amp;#34;],
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt; &amp;#34;dataSource&amp;#34;: &amp;#34;/data/input&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt; &amp;#34;targetLocation&amp;#34;: &amp;#34;/data/output&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a40000"&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;请求体参数&lt;/strong&gt;:&lt;/p&gt;</description></item></channel></rss>

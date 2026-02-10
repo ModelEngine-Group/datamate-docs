@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on DataMate</title><link>https://modelengine-group.github.io/datamate-docs/en/tags/docker/</link><description>Recent content in Docker on DataMate</description><generator>Hugo</generator><language>en</language><atom:link href="https://modelengine-group.github.io/datamate-docs/en/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Quick Start</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;This guide will help you deploy DataMate platform in 5 minutes.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;DataMate supports two main deployment methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Docker Compose&lt;/strong&gt;: Suitable for quick experience and development testing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kubernetes/Helm&lt;/strong&gt;: Suitable for production deployment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="prerequisites"&gt;Prerequisites&lt;a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="docker-compose-deployment"&gt;Docker Compose Deployment&lt;a class="td-heading-self-link" href="#docker-compose-deployment" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker 20.10+&lt;/li&gt;
+&lt;li&gt;Docker Compose 2.0+&lt;/li&gt;
+&lt;li&gt;At least 4GB RAM&lt;/li&gt;
+&lt;li&gt;At least 10GB disk space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="kubernetes-deployment"&gt;Kubernetes Deployment&lt;a class="td-heading-self-link" href="#kubernetes-deployment" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Kubernetes 1.20+&lt;/li&gt;
+&lt;li&gt;Helm 3.0+&lt;/li&gt;
+&lt;li&gt;kubectl configured with cluster connection&lt;/li&gt;
+&lt;li&gt;At least 8GB RAM&lt;/li&gt;
+&lt;li&gt;At least 20GB disk space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="5-minute-quick-deployment-docker-compose"&gt;5-Minute Quick Deployment (Docker Compose)&lt;a class="td-heading-self-link" href="#5-minute-quick-deployment-docker-compose" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-clone-the-code"&gt;1. Clone the Code&lt;a class="td-heading-self-link" href="#1-clone-the-code" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git clone https://github.com/ModelEngine-Group/DataMate.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; DataMate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="2-start-services"&gt;2. Start Services&lt;a class="td-heading-self-link" href="#2-start-services" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Use the provided Makefile for one-click deployment:&lt;/p&gt;</description></item></channel></rss>

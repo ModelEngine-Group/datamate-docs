@@ -1,1 +1,565 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>快速开始 on DataMate</title><link>https://modelengine-group.github.io/datamate-docs/docs/getting-started/</link><description>Recent content in 快速开始 on DataMate</description><generator>Hugo</generator><language>zh</language><atom:link href="https://modelengine-group.github.io/datamate-docs/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>docker compose 安装</title><link>https://modelengine-group.github.io/datamate-docs/docs/getting-started/example-page/</link><pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/getting-started/example-page/</guid><description>&lt;h1 id="文档完善中敬请期待"&gt;文档完善中，敬请期待～&lt;a class="td-heading-self-link" href="#%e6%96%87%e6%a1%a3%e5%ae%8c%e5%96%84%e4%b8%ad%e6%95%ac%e8%af%b7%e6%9c%9f%e5%be%85" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>快速开始 on DataMate</title><link>https://modelengine-group.github.io/datamate-docs/docs/getting-started/</link><description>Recent content in 快速开始 on DataMate</description><generator>Hugo</generator><language>zh</language><atom:link href="https://modelengine-group.github.io/datamate-docs/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>安装部署指南</title><link>https://modelengine-group.github.io/datamate-docs/docs/getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/getting-started/installation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;本文档提供 DataMate 平台的详细安装和配置说明。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="系统要求"&gt;系统要求&lt;a class="td-heading-self-link" href="#%e7%b3%bb%e7%bb%9f%e8%a6%81%e6%b1%82" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="最低配置"&gt;最低配置&lt;a class="td-heading-self-link" href="#%e6%9c%80%e4%bd%8e%e9%85%8d%e7%bd%ae" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;组件&lt;/th&gt;
+ &lt;th&gt;最低要求&lt;/th&gt;
+ &lt;th&gt;推荐配置&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;CPU&lt;/td&gt;
+ &lt;td&gt;4 核&lt;/td&gt;
+ &lt;td&gt;8 核+&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;内存&lt;/td&gt;
+ &lt;td&gt;8 GB&lt;/td&gt;
+ &lt;td&gt;16 GB+&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;磁盘&lt;/td&gt;
+ &lt;td&gt;50 GB&lt;/td&gt;
+ &lt;td&gt;100 GB+&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;操作系统&lt;/td&gt;
+ &lt;td&gt;Linux/macOS/Windows&lt;/td&gt;
+ &lt;td&gt;Linux (Ubuntu 20.04+)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="软件依赖"&gt;软件依赖&lt;a class="td-heading-self-link" href="#%e8%bd%af%e4%bb%b6%e4%be%9d%e8%b5%96" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="docker-compose-部署"&gt;Docker Compose 部署&lt;a class="td-heading-self-link" href="#docker-compose-%e9%83%a8%e7%bd%b2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker 20.10+&lt;/li&gt;
+&lt;li&gt;Docker Compose 2.0+&lt;/li&gt;
+&lt;li&gt;Git (可选，用于克隆代码)&lt;/li&gt;
+&lt;li&gt;Make (可选，用于使用 Makefile)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="kubernetes-部署"&gt;Kubernetes 部署&lt;a class="td-heading-self-link" href="#kubernetes-%e9%83%a8%e7%bd%b2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Kubernetes 1.20+&lt;/li&gt;
+&lt;li&gt;Helm 3.0+&lt;/li&gt;
+&lt;li&gt;kubectl (与集群版本匹配)&lt;/li&gt;
+&lt;li&gt;Git (可选，用于克隆代码)&lt;/li&gt;
+&lt;li&gt;Make (可选，使用 Makefile)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="部署方式对比"&gt;部署方式对比&lt;a class="td-heading-self-link" href="#%e9%83%a8%e7%bd%b2%e6%96%b9%e5%bc%8f%e5%af%b9%e6%af%94" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;特性&lt;/th&gt;
+ &lt;th&gt;Docker Compose&lt;/th&gt;
+ &lt;th&gt;Kubernetes&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;部署难度&lt;/td&gt;
+ &lt;td&gt;⭐ 简单&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐ 复杂&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;资源利用&lt;/td&gt;
+ &lt;td&gt;⭐⭐ 一般&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐⭐ 高&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;高可用&lt;/td&gt;
+ &lt;td&gt;❌ 不支持&lt;/td&gt;
+ &lt;td&gt;✅ 支持&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;扩展性&lt;/td&gt;
+ &lt;td&gt;⭐⭐ 一般&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐⭐ 强&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;适用场景&lt;/td&gt;
+ &lt;td&gt;开发测试、小规模部署&lt;/td&gt;
+ &lt;td&gt;生产环境、大规模部署&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="docker-compose-部署-1"&gt;Docker Compose 部署&lt;a class="td-heading-self-link" href="#docker-compose-%e9%83%a8%e7%bd%b2-1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="基础部署"&gt;基础部署&lt;a class="td-heading-self-link" href="#%e5%9f%ba%e7%a1%80%e9%83%a8%e7%bd%b2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="1-准备工作"&gt;1. 准备工作&lt;a class="td-heading-self-link" href="#1-%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 克隆代码仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git clone https://github.com/ModelEngine-Group/DataMate.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; DataMate
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 检查 Docker 和 Docker Compose 版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker --version
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker compose version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="2-使用-makefile-部署"&gt;2. 使用 Makefile 部署&lt;a class="td-heading-self-link" href="#2-%e4%bd%bf%e7%94%a8-makefile-%e9%83%a8%e7%bd%b2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 一键部署（包括 Milvus）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在提示中选择 &lt;code&gt;1. Docker/Docker-Compose&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>系统架构</title><link>https://modelengine-group.github.io/datamate-docs/docs/getting-started/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/getting-started/architecture/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;本文档详细介绍 DataMate 的系统架构、技术栈和设计理念。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="整体架构"&gt;整体架构&lt;a class="td-heading-self-link" href="#%e6%95%b4%e4%bd%93%e6%9e%b6%e6%9e%84" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;DataMate 采用微服务架构，将系统拆分为多个独立的服务，每个服务负责特定的业务功能。这种架构提供了良好的可扩展性、可维护性和容错性。&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;┌─────────────────────────────────────────────────────────────────┐
+│ 前端层 │
+│ (React + TypeScript) │
+│ Ant Design + Tailwind │
+└────────────────────────┬────────────────────────────────────────┘
+ │
+ ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ API 网关层 │
+│ (Spring Cloud Gateway) │
+│ 端口: 8080 │
+└────────────────────────┬────────────────────────────────────────┘
+ │
+ ┌───────────────┼───────────────┐
+ ▼ ▼ ▼
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ Java 后端 │ │ Python 后端 │ │ 运行时服务 │
+│ 服务组 │ │ 服务 │ │ (Ray) │
+├──────────────┤ ├──────────────┤ ├──────────────┤
+│· Main App │ │· RAG Service │ │· Operator │
+│· Data Mgmt │ │· LangChain │ │ Execution │
+│· Collection │ │· FastAPI │ │ │
+│· Cleaning │ │ │ │ │
+│· Annotation │ │ │ │ │
+│· Synthesis │ │ │ │ │
+│· Evaluation │ │ │ │ │
+│· Operator │ │ │ │ │
+│· Pipeline │ │ │ │ │
+└──────┬───────┘ └──────┬───────┘ └──────┬───────┘
+ │ │ │
+ └────────────────┼────────────────┘
+ ▼
+ ┌──────────────┴──────────────┐
+ │ │
+ ┌────▼────┐ ┌─────────┐ ┌─────▼────┐
+ │PostgreSQL│ │ Redis │ │ Milvus │
+ │ (5432) │ │ (6379) │ │ (19530) │
+ └──────────┘ └─────────┘ └──────────┘
+ │
+ ┌─────▼─────┐
+ │ MinIO │
+ │ (9000) │
+ └───────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="技术栈"&gt;技术栈&lt;a class="td-heading-self-link" href="#%e6%8a%80%e6%9c%af%e6%a0%88" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="前端技术栈"&gt;前端技术栈&lt;a class="td-heading-self-link" href="#%e5%89%8d%e7%ab%af%e6%8a%80%e6%9c%af%e6%a0%88" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;技术&lt;/th&gt;
+ &lt;th&gt;版本&lt;/th&gt;
+ &lt;th&gt;用途&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;React&lt;/td&gt;
+ &lt;td&gt;18.x&lt;/td&gt;
+ &lt;td&gt;UI 框架&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;TypeScript&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;类型安全&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Ant Design&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;UI 组件库&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Tailwind CSS&lt;/td&gt;
+ &lt;td&gt;3.x&lt;/td&gt;
+ &lt;td&gt;样式框架&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Redux Toolkit&lt;/td&gt;
+ &lt;td&gt;2.x&lt;/td&gt;
+ &lt;td&gt;状态管理&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;React Router&lt;/td&gt;
+ &lt;td&gt;6.x&lt;/td&gt;
+ &lt;td&gt;路由管理&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Vite&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;构建工具&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="后端技术栈java"&gt;后端技术栈（Java）&lt;a class="td-heading-self-link" href="#%e5%90%8e%e7%ab%af%e6%8a%80%e6%9c%af%e6%a0%88java" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;技术&lt;/th&gt;
+ &lt;th&gt;版本&lt;/th&gt;
+ &lt;th&gt;用途&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Java&lt;/td&gt;
+ &lt;td&gt;21&lt;/td&gt;
+ &lt;td&gt;运行时环境&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;3.5.6&lt;/td&gt;
+ &lt;td&gt;应用框架&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Spring Cloud&lt;/td&gt;
+ &lt;td&gt;2023.x&lt;/td&gt;
+ &lt;td&gt;微服务框架&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MyBatis Plus&lt;/td&gt;
+ &lt;td&gt;3.x&lt;/td&gt;
+ &lt;td&gt;ORM 框架&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PostgreSQL Driver&lt;/td&gt;
+ &lt;td&gt;42.x&lt;/td&gt;
+ &lt;td&gt;数据库驱动&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Redis&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;缓存客户端&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MinIO&lt;/td&gt;
+ &lt;td&gt;8.x&lt;/td&gt;
+ &lt;td&gt;对象存储客户端&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="后端技术栈python"&gt;后端技术栈（Python）&lt;a class="td-heading-self-link" href="#%e5%90%8e%e7%ab%af%e6%8a%80%e6%9c%af%e6%a0%88python" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;技术&lt;/th&gt;
+ &lt;th&gt;版本&lt;/th&gt;
+ &lt;th&gt;用途&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Python&lt;/td&gt;
+ &lt;td&gt;3.11+&lt;/td&gt;
+ &lt;td&gt;运行时环境&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;FastAPI&lt;/td&gt;
+ &lt;td&gt;0.100+&lt;/td&gt;
+ &lt;td&gt;Web 框架&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;LangChain&lt;/td&gt;
+ &lt;td&gt;0.1+&lt;/td&gt;
+ &lt;td&gt;LLM 应用框架&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Ray&lt;/td&gt;
+ &lt;td&gt;2.x&lt;/td&gt;
+ &lt;td&gt;分布式计算&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Pydantic&lt;/td&gt;
+ &lt;td&gt;2.x&lt;/td&gt;
+ &lt;td&gt;数据验证&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="数据存储"&gt;数据存储&lt;a class="td-heading-self-link" href="#%e6%95%b0%e6%8d%ae%e5%ad%98%e5%82%a8" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;技术&lt;/th&gt;
+ &lt;th&gt;版本&lt;/th&gt;
+ &lt;th&gt;用途&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PostgreSQL&lt;/td&gt;
+ &lt;td&gt;15+&lt;/td&gt;
+ &lt;td&gt;主数据库&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Redis&lt;/td&gt;
+ &lt;td&gt;8.x&lt;/td&gt;
+ &lt;td&gt;缓存和消息队列&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Milvus&lt;/td&gt;
+ &lt;td&gt;2.6.5&lt;/td&gt;
+ &lt;td&gt;向量数据库&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MinIO&lt;/td&gt;
+ &lt;td&gt;RELEASE.2024+&lt;/td&gt;
+ &lt;td&gt;对象存储&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="微服务架构"&gt;微服务架构&lt;a class="td-heading-self-link" href="#%e5%be%ae%e6%9c%8d%e5%8a%a1%e6%9e%b6%e6%9e%84" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="服务列表"&gt;服务列表&lt;a class="td-heading-self-link" href="#%e6%9c%8d%e5%8a%a1%e5%88%97%e8%a1%a8" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;服务名称&lt;/th&gt;
+ &lt;th&gt;端口&lt;/th&gt;
+ &lt;th&gt;技术栈&lt;/th&gt;
+ &lt;th&gt;功能描述&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;API Gateway&lt;/td&gt;
+ &lt;td&gt;8080&lt;/td&gt;
+ &lt;td&gt;Spring Cloud Gateway&lt;/td&gt;
+ &lt;td&gt;统一入口、路由、认证&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Frontend&lt;/td&gt;
+ &lt;td&gt;30000&lt;/td&gt;
+ &lt;td&gt;React&lt;/td&gt;
+ &lt;td&gt;前端界面&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Main Application&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;核心业务逻辑&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Management Service&lt;/td&gt;
+ &lt;td&gt;8092&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;数据集管理&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Collection Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;数据采集任务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Cleaning Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;数据清洗任务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Annotation Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;数据标注任务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Synthesis Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;数据合成任务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Evaluation Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;数据评估任务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Operator Market Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;算子市场&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;RAG Indexer Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;知识库索引&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Runtime Service&lt;/td&gt;
+ &lt;td&gt;8081&lt;/td&gt;
+ &lt;td&gt;Python + Ray&lt;/td&gt;
+ &lt;td&gt;算子执行引擎&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Backend Python Service&lt;/td&gt;
+ &lt;td&gt;18000&lt;/td&gt;
+ &lt;td&gt;FastAPI&lt;/td&gt;
+ &lt;td&gt;Python 后端服务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Database&lt;/td&gt;
+ &lt;td&gt;5432&lt;/td&gt;
+ &lt;td&gt;PostgreSQL&lt;/td&gt;
+ &lt;td&gt;数据库&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="服务通信"&gt;服务通信&lt;a class="td-heading-self-link" href="#%e6%9c%8d%e5%8a%a1%e9%80%9a%e4%bf%a1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="同步通信"&gt;同步通信&lt;a class="td-heading-self-link" href="#%e5%90%8c%e6%ad%a5%e9%80%9a%e4%bf%a1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;API Gateway → 后端服务&lt;/strong&gt;：HTTP/REST&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;前端 → API Gateway&lt;/strong&gt;：HTTP/REST&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后端服务之间&lt;/strong&gt;：HTTP/REST (Feign Client)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="异步通信"&gt;异步通信&lt;a class="td-heading-self-link" href="#%e5%bc%82%e6%ad%a5%e9%80%9a%e4%bf%a1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务执行&lt;/strong&gt;：通过数据库任务队列&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事件通知&lt;/strong&gt;：Redis Pub/Sub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="服务发现与注册"&gt;服务发现与注册&lt;a class="td-heading-self-link" href="#%e6%9c%8d%e5%8a%a1%e5%8f%91%e7%8e%b0%e4%b8%8e%e6%b3%a8%e5%86%8c" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;DataMate 使用简单的服务注册机制：&lt;/p&gt;</description></item><item><title>开发环境搭建</title><link>https://modelengine-group.github.io/datamate-docs/docs/getting-started/development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/getting-started/development/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;本文档介绍如何搭建 DataMate 的本地开发环境。&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="前置要求"&gt;前置要求&lt;a class="td-heading-self-link" href="#%e5%89%8d%e7%bd%ae%e8%a6%81%e6%b1%82" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="必需软件"&gt;必需软件&lt;a class="td-heading-self-link" href="#%e5%bf%85%e9%9c%80%e8%bd%af%e4%bb%b6" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;软件&lt;/th&gt;
+ &lt;th&gt;版本要求&lt;/th&gt;
+ &lt;th&gt;用途&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Node.js&lt;/td&gt;
+ &lt;td&gt;18.x+&lt;/td&gt;
+ &lt;td&gt;前端开发&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;pnpm&lt;/td&gt;
+ &lt;td&gt;8.x+&lt;/td&gt;
+ &lt;td&gt;前端包管理&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Java&lt;/td&gt;
+ &lt;td&gt;21&lt;/td&gt;
+ &lt;td&gt;后端开发&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Maven&lt;/td&gt;
+ &lt;td&gt;3.9+&lt;/td&gt;
+ &lt;td&gt;后端构建&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Python&lt;/td&gt;
+ &lt;td&gt;3.11+&lt;/td&gt;
+ &lt;td&gt;Python 服务开发&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Docker&lt;/td&gt;
+ &lt;td&gt;20.10+&lt;/td&gt;
+ &lt;td&gt;容器化部署&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Docker Compose&lt;/td&gt;
+ &lt;td&gt;2.0+&lt;/td&gt;
+ &lt;td&gt;服务编排&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Git&lt;/td&gt;
+ &lt;td&gt;2.x+&lt;/td&gt;
+ &lt;td&gt;版本控制&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Make&lt;/td&gt;
+ &lt;td&gt;4.x+&lt;/td&gt;
+ &lt;td&gt;构建自动化&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="推荐软件"&gt;推荐软件&lt;a class="td-heading-self-link" href="#%e6%8e%a8%e8%8d%90%e8%bd%af%e4%bb%b6" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IDE&lt;/strong&gt;：IntelliJ IDEA (后端) + VS Code (前端/Python)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据库客户端&lt;/strong&gt;：DBeaver、pgAdmin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API 测试工具&lt;/strong&gt;：Postman、curl&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git 客户端&lt;/strong&gt;：GitKraken、SourceTree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="代码结构"&gt;代码结构&lt;a class="td-heading-self-link" href="#%e4%bb%a3%e7%a0%81%e7%bb%93%e6%9e%84" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;DataMate/
+├── backend/ # Java 后端
+│ ├── services/ # 微服务模块
+│ │ ├── main-application/
+│ │ ├── data-management-service/
+│ │ ├── data-cleaning-service/
+│ │ ├── data-collection-service/
+│ │ ├── data-annotation-service/
+│ │ ├── data-synthesis-service/
+│ │ ├── data-evaluation-service/
+│ │ ├── operator-market-service/
+│ │ └── rag-indexer-service/
+│ ├── openapi/ # OpenAPI 规范
+│ └── scripts/ # 构建脚本
+├── frontend/ # React 前端
+│ ├── src/
+│ │ ├── components/ # 公共组件
+│ │ ├── pages/ # 页面组件
+│ │ ├── services/ # API 服务
+│ │ ├── store/ # Redux store
+│ │ └── routes/ # 路由配置
+│ └── package.json
+├── runtime/ # Python 运行时
+│ ├── deer-flow/ # DeerFlow 集成
+│ └── datamate/ # DataMate 运行时
+└── deployment/ # 部署配置
+ ├── docker/ # Docker 配置
+ └── helm/ # Helm Charts
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="后端开发环境"&gt;后端开发环境&lt;a class="td-heading-self-link" href="#%e5%90%8e%e7%ab%af%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-安装-java-21"&gt;1. 安装 Java 21&lt;a class="td-heading-self-link" href="#1-%e5%ae%89%e8%a3%85-java-21" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# macOS (使用 Homebrew)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew install openjdk@21
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Linux (Ubuntu/Debian)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install openjdk-21-jdk
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 验证安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="2-安装-maven"&gt;2. 安装 Maven&lt;a class="td-heading-self-link" href="#2-%e5%ae%89%e8%a3%85-maven" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# macOS&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew install maven
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Linux&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install maven
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 验证安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mvn -version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="3-配置-ideintellij-idea"&gt;3. 配置 IDE（IntelliJ IDEA）&lt;a class="td-heading-self-link" href="#3-%e9%85%8d%e7%bd%ae-ideintellij-idea" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="安装插件"&gt;安装插件&lt;a class="td-heading-self-link" href="#%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Lombok Plugin&lt;/li&gt;
+&lt;li&gt;MyBatis Plugin&lt;/li&gt;
+&lt;li&gt;Rainbow Brackets&lt;/li&gt;
+&lt;li&gt;GitToolBox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="导入项目"&gt;导入项目&lt;a class="td-heading-self-link" href="#%e5%af%bc%e5%85%a5%e9%a1%b9%e7%9b%ae" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 IntelliJ IDEA&lt;/li&gt;
+&lt;li&gt;选择 &lt;code&gt;File&lt;/code&gt; → &lt;code&gt;Open&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;选择 &lt;code&gt;backend&lt;/code&gt; 目录&lt;/li&gt;
+&lt;li&gt;等待 Maven 依赖下载完成&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="配置运行配置"&gt;配置运行配置&lt;a class="td-heading-self-link" href="#%e9%85%8d%e7%bd%ae%e8%bf%90%e8%a1%8c%e9%85%8d%e7%bd%ae" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;创建 Spring Boot 运行配置：&lt;/p&gt;</description></item></channel></rss>

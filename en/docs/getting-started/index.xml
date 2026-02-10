@@ -1,7 +1,670 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting Started on DataMate</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/</link><description>Recent content in Getting Started on DataMate</description><generator>Hugo</generator><language>en</language><atom:link href="https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Example Page</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/example-page/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/example-page/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
-&lt;p&gt;This is a placeholder page. Replace it with your own content.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quick Start on DataMate</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/</link><description>Recent content in Quick Start on DataMate</description><generator>Hugo</generator><language>en</language><atom:link href="https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation Guide</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/installation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;This document provides detailed installation and configuration instructions for the DataMate platform.&lt;/p&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;Text can be &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, or &lt;del&gt;strikethrough&lt;/del&gt;. &lt;a href="https://gohugo.io"&gt;Links&lt;/a&gt; should be blue with no underlines (unless hovered over).&lt;/p&gt;
-&lt;p&gt;There should be whitespace between paragraphs. Vape migas chillwave sriracha poutine try-hard distillery. Tattooed shabby chic small batch, pabst art party heirloom letterpress air plant pop-up. Sustainable chia skateboard art party banjo cardigan normcore affogato vexillologist quinoa meggings man bun master cleanse shoreditch readymade. Yuccie prism four dollar toast tbh cardigan iPhone, tumblr listicle live-edge VHS. Pug lyft normcore hot chicken biodiesel, actually keffiyeh thundercats photo booth pour-over twee fam food truck microdosing banh mi. Vice activated charcoal raclette unicorn live-edge post-ironic. Heirloom vexillologist coloring book, beard deep v letterpress echo park humblebrag tilde.&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id="system-requirements"&gt;System Requirements&lt;a class="td-heading-self-link" href="#system-requirements" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="minimum-configuration"&gt;Minimum Configuration&lt;a class="td-heading-self-link" href="#minimum-configuration" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Component&lt;/th&gt;
+ &lt;th&gt;Minimum&lt;/th&gt;
+ &lt;th&gt;Recommended&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;CPU&lt;/td&gt;
+ &lt;td&gt;4 cores&lt;/td&gt;
+ &lt;td&gt;8 cores+&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;RAM&lt;/td&gt;
+ &lt;td&gt;8 GB&lt;/td&gt;
+ &lt;td&gt;16 GB+&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Disk&lt;/td&gt;
+ &lt;td&gt;50 GB&lt;/td&gt;
+ &lt;td&gt;100 GB+&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;OS&lt;/td&gt;
+ &lt;td&gt;Linux/macOS/Windows&lt;/td&gt;
+ &lt;td&gt;Linux (Ubuntu 20.04+)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="software-dependencies"&gt;Software Dependencies&lt;a class="td-heading-self-link" href="#software-dependencies" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="docker-compose-deployment"&gt;Docker Compose Deployment&lt;a class="td-heading-self-link" href="#docker-compose-deployment" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker 20.10+&lt;/li&gt;
+&lt;li&gt;Docker Compose 2.0+&lt;/li&gt;
+&lt;li&gt;Git (optional, for cloning code)&lt;/li&gt;
+&lt;li&gt;Make (optional, for using Makefile)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="kubernetes-deployment"&gt;Kubernetes Deployment&lt;a class="td-heading-self-link" href="#kubernetes-deployment" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Kubernetes 1.20+&lt;/li&gt;
+&lt;li&gt;Helm 3.0+&lt;/li&gt;
+&lt;li&gt;kubectl (matching cluster version)&lt;/li&gt;
+&lt;li&gt;Git (optional, for cloning code)&lt;/li&gt;
+&lt;li&gt;Make (optional, for using Makefile)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="deployment-method-comparison"&gt;Deployment Method Comparison&lt;a class="td-heading-self-link" href="#deployment-method-comparison" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Feature&lt;/th&gt;
+ &lt;th&gt;Docker Compose&lt;/th&gt;
+ &lt;th&gt;Kubernetes&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Deployment Difficulty&lt;/td&gt;
+ &lt;td&gt;⭐ Simple&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐ Complex&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Resource Utilization&lt;/td&gt;
+ &lt;td&gt;⭐⭐ Fair&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐⭐ High&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;High Availability&lt;/td&gt;
+ &lt;td&gt;❌ Not supported&lt;/td&gt;
+ &lt;td&gt;✅ Supported&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Scalability&lt;/td&gt;
+ &lt;td&gt;⭐⭐ Fair&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐⭐ Strong&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Use Case&lt;/td&gt;
+ &lt;td&gt;Dev/test, small scale&lt;/td&gt;
+ &lt;td&gt;Production, large scale&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="docker-compose-deployment-1"&gt;Docker Compose Deployment&lt;a class="td-heading-self-link" href="#docker-compose-deployment-1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="basic-deployment"&gt;Basic Deployment&lt;a class="td-heading-self-link" href="#basic-deployment" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="1-prerequisites"&gt;1. Prerequisites&lt;a class="td-heading-self-link" href="#1-prerequisites" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Clone code repository&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git clone https://github.com/ModelEngine-Group/DataMate.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; DataMate
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Check Docker and Docker Compose versions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker --version
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker compose version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="2-deploy-using-makefile"&gt;2. Deploy Using Makefile&lt;a class="td-heading-self-link" href="#2-deploy-using-makefile" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# One-click deployment (including Milvus)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Select &lt;code&gt;1. Docker/Docker-Compose&lt;/code&gt; when prompted.&lt;/p&gt;</description></item><item><title>System Architecture</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/architecture/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;This document details DataMate&amp;rsquo;s system architecture, tech stack, and design philosophy.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="overall-architecture"&gt;Overall Architecture&lt;a class="td-heading-self-link" href="#overall-architecture" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;DataMate adopts a microservices architecture, splitting the system into multiple independent services, each responsible for specific business functions. This architecture provides good scalability, maintainability, and fault tolerance.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;┌─────────────────────────────────────────────────────────────────┐
+│ Frontend Layer │
+│ (React + TypeScript) │
+│ Ant Design + Tailwind │
+└────────────────────────┬────────────────────────────────────────┘
+ │
+ ▼
+┌─────────────────────────────────────────────────────────────────┐
+│ API Gateway Layer │
+│ (Spring Cloud Gateway) │
+│ Port: 8080 │
+└────────────────────────┬────────────────────────────────────────┘
+ │
+ ┌───────────────┼───────────────┐
+ ▼ ▼ ▼
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ Java Backend│ │ Python Backend│ │ Runtime │
+│ Services │ │ Service │ │ Service │
+├──────────────┤ ├──────────────┤ ├──────────────┤
+│· Main App │ │· RAG Service │ │· Operator │
+│· Data Mgmt │ │· LangChain │ │ Execution │
+│· Collection │ │· FastAPI │ │ │
+│· Cleaning │ │ │ │ │
+│· Annotation │ │ │ │ │
+│· Synthesis │ │ │ │ │
+│· Evaluation │ │ │ │ │
+│· Operator │ │ │ │ │
+│· Pipeline │ │ │ │ │
+└──────┬───────┘ └──────┬───────┘ └──────┬───────┘
+ │ │ │
+ └────────────────┼────────────────┘
+ ▼
+ ┌──────────────┴──────────────┐
+ │ │
+ ┌────▼────┐ ┌─────────┐ ┌─────▼────┐
+ │PostgreSQL│ │ Redis │ │ Milvus │
+ │ (5432) │ │ (6379) │ │ (19530) │
+ └──────────┘ └─────────┘ └──────────┘
+ │
+ ┌─────▼─────┐
+ │ MinIO │
+ │ (9000) │
+ └───────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="tech-stack"&gt;Tech Stack&lt;a class="td-heading-self-link" href="#tech-stack" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="frontend-tech-stack"&gt;Frontend Tech Stack&lt;a class="td-heading-self-link" href="#frontend-tech-stack" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Technology&lt;/th&gt;
+ &lt;th&gt;Version&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;React&lt;/td&gt;
+ &lt;td&gt;18.x&lt;/td&gt;
+ &lt;td&gt;UI framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;TypeScript&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;Type safety&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Ant Design&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;UI component library&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Tailwind CSS&lt;/td&gt;
+ &lt;td&gt;3.x&lt;/td&gt;
+ &lt;td&gt;Styling framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Redux Toolkit&lt;/td&gt;
+ &lt;td&gt;2.x&lt;/td&gt;
+ &lt;td&gt;State management&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;React Router&lt;/td&gt;
+ &lt;td&gt;6.x&lt;/td&gt;
+ &lt;td&gt;Routing management&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Vite&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;Build tool&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="backend-tech-stack-java"&gt;Backend Tech Stack (Java)&lt;a class="td-heading-self-link" href="#backend-tech-stack-java" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Technology&lt;/th&gt;
+ &lt;th&gt;Version&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Java&lt;/td&gt;
+ &lt;td&gt;21&lt;/td&gt;
+ &lt;td&gt;Runtime environment&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;3.5.6&lt;/td&gt;
+ &lt;td&gt;Application framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Spring Cloud&lt;/td&gt;
+ &lt;td&gt;2023.x&lt;/td&gt;
+ &lt;td&gt;Microservices framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MyBatis Plus&lt;/td&gt;
+ &lt;td&gt;3.x&lt;/td&gt;
+ &lt;td&gt;ORM framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PostgreSQL Driver&lt;/td&gt;
+ &lt;td&gt;42.x&lt;/td&gt;
+ &lt;td&gt;Database driver&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Redis&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;Cache client&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MinIO&lt;/td&gt;
+ &lt;td&gt;8.x&lt;/td&gt;
+ &lt;td&gt;Object storage client&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="backend-tech-stack-python"&gt;Backend Tech Stack (Python)&lt;a class="td-heading-self-link" href="#backend-tech-stack-python" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Technology&lt;/th&gt;
+ &lt;th&gt;Version&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Python&lt;/td&gt;
+ &lt;td&gt;3.11+&lt;/td&gt;
+ &lt;td&gt;Runtime environment&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;FastAPI&lt;/td&gt;
+ &lt;td&gt;0.100+&lt;/td&gt;
+ &lt;td&gt;Web framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;LangChain&lt;/td&gt;
+ &lt;td&gt;0.1+&lt;/td&gt;
+ &lt;td&gt;LLM application framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Ray&lt;/td&gt;
+ &lt;td&gt;2.x&lt;/td&gt;
+ &lt;td&gt;Distributed computing&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Pydantic&lt;/td&gt;
+ &lt;td&gt;2.x&lt;/td&gt;
+ &lt;td&gt;Data validation&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="data-storage"&gt;Data Storage&lt;a class="td-heading-self-link" href="#data-storage" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Technology&lt;/th&gt;
+ &lt;th&gt;Version&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PostgreSQL&lt;/td&gt;
+ &lt;td&gt;15+&lt;/td&gt;
+ &lt;td&gt;Main database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Redis&lt;/td&gt;
+ &lt;td&gt;8.x&lt;/td&gt;
+ &lt;td&gt;Cache and message queue&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Milvus&lt;/td&gt;
+ &lt;td&gt;2.6.5&lt;/td&gt;
+ &lt;td&gt;Vector database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MinIO&lt;/td&gt;
+ &lt;td&gt;RELEASE.2024+&lt;/td&gt;
+ &lt;td&gt;Object storage&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="microservices-architecture"&gt;Microservices Architecture&lt;a class="td-heading-self-link" href="#microservices-architecture" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="service-list"&gt;Service List&lt;a class="td-heading-self-link" href="#service-list" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Service Name&lt;/th&gt;
+ &lt;th&gt;Port&lt;/th&gt;
+ &lt;th&gt;Tech Stack&lt;/th&gt;
+ &lt;th&gt;Description&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;API Gateway&lt;/td&gt;
+ &lt;td&gt;8080&lt;/td&gt;
+ &lt;td&gt;Spring Cloud Gateway&lt;/td&gt;
+ &lt;td&gt;Unified entry, routing, auth&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Frontend&lt;/td&gt;
+ &lt;td&gt;30000&lt;/td&gt;
+ &lt;td&gt;React&lt;/td&gt;
+ &lt;td&gt;Frontend UI&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Main Application&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;Core business logic&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Management Service&lt;/td&gt;
+ &lt;td&gt;8092&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;Dataset management&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Collection Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;Data collection tasks&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Cleaning Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;Data cleaning tasks&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Annotation Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;Data annotation tasks&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Synthesis Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;Data synthesis tasks&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data Evaluation Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;Data evaluation tasks&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Operator Market Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;Operator marketplace&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;RAG Indexer Service&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;Knowledge base indexing&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Runtime Service&lt;/td&gt;
+ &lt;td&gt;8081&lt;/td&gt;
+ &lt;td&gt;Python + Ray&lt;/td&gt;
+ &lt;td&gt;Operator execution engine&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Backend Python Service&lt;/td&gt;
+ &lt;td&gt;18000&lt;/td&gt;
+ &lt;td&gt;FastAPI&lt;/td&gt;
+ &lt;td&gt;Python backend service&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Database&lt;/td&gt;
+ &lt;td&gt;5432&lt;/td&gt;
+ &lt;td&gt;PostgreSQL&lt;/td&gt;
+ &lt;td&gt;Database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="service-communication"&gt;Service Communication&lt;a class="td-heading-self-link" href="#service-communication" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="synchronous-communication"&gt;Synchronous Communication&lt;a class="td-heading-self-link" href="#synchronous-communication" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;API Gateway → Backend Services&lt;/strong&gt;: HTTP/REST&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Frontend → API Gateway&lt;/strong&gt;: HTTP/REST&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Backend Services ↔&lt;/strong&gt;: HTTP/REST (Feign Client)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="asynchronous-communication"&gt;Asynchronous Communication&lt;a class="td-heading-self-link" href="#asynchronous-communication" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Task Execution&lt;/strong&gt;: Database task queue&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Event Notification&lt;/strong&gt;: Redis Pub/Sub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="data-architecture"&gt;Data Architecture&lt;a class="td-heading-self-link" href="#data-architecture" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="data-flow"&gt;Data Flow&lt;a class="td-heading-self-link" href="#data-flow" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;┌─────────────┐
+│ Data │ Collection task config
+│ Collection │ → DataX → Raw data
+└──────┬──────┘
+ │
+ ▼
+┌─────────────┐
+│ Data │ Dataset management, file upload
+│ Management │ → Structured storage
+└──────┬──────┘
+ │
+ ├──────────────┐
+ ▼ ▼
+┌─────────────┐ ┌─────────────┐
+│ Data │ │ Knowledge │
+│ Cleaning │ │ Base │
+│ │ │ │
+└──────┬──────┘ └──────┬──────┘
+ │ │
+ ▼ ▼
+┌─────────────┐ ┌─────────────┐
+│ Data │ │ Vector │
+│ Annotation │ │ Index │
+└──────┬──────┘ └──────┬──────┘
+ │ │
+ ▼ │
+┌─────────────┐ │
+│ Data │ │
+│ Synthesis │ │
+└──────┬──────┘ │
+ │ │
+ ▼ ▼
+┌─────────────┐ ┌─────────────┐
+│ Data │ │ RAG │
+│ Evaluation │ │ Retrieval │
+└─────────────┘ └─────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="deployment-architecture"&gt;Deployment Architecture&lt;a class="td-heading-self-link" href="#deployment-architecture" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="docker-compose-deployment"&gt;Docker Compose Deployment&lt;a class="td-heading-self-link" href="#docker-compose-deployment" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;┌────────────────────────────────────────────────┐
+│ Docker Network │
+│ datamate-network │
+│ │
+│ ┌──────────┐ ┌──────────┐ ┌──────────┐ │
+│ │Frontend │ │ Gateway │ │ Backend │ │
+│ │ :30000 │ │ :8080 │ │ │ │
+│ └──────────┘ └──────────┘ └──────────┘ │
+│ │
+│ ┌──────────┐ ┌──────────┐ ┌──────────┐ │
+│ │Backend │ │ Runtime │ │Database │ │
+│ │ Python │ │ :8081 │ │ :5432 │ │
+│ └──────────┘ └──────────┘ └──────────┘ │
+│ │
+│ ┌──────────┐ ┌──────────┐ ┌──────────┐ │
+│ │ Milvus │ │ MinIO │ │ etcd │ │
+│ │ :19530 │ │ :9000 │ │ │ │
+│ └──────────┘ └──────────┘ └──────────┘ │
+└────────────────────────────────────────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="kubernetes-deployment"&gt;Kubernetes Deployment&lt;a class="td-heading-self-link" href="#kubernetes-deployment" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;┌────────────────────────────────────────────────┐
+│ Kubernetes Cluster │
+│ │
+│ Namespace: datamate │
+│ │
+│ ┌────────────┐ ┌────────────┐ │
+│ │ Deployment │ │ Deployment │ │
+│ │ Frontend │ │ Gateway │ │
+│ │ (3 Pods) │ │ (2 Pods) │ │
+│ └─────┬──────┘ └─────┬──────┘ │
+│ │ │ │
+│ ┌─────▼────────────────▼──────┐ │
+│ │ Service (LoadBalancer) │ │
+│ └──────────────────────────────┘ │
+│ │
+│ ┌────────────┐ ┌────────────┐ │
+│ │ StatefulSet│ │ Deployment │ │
+│ │ Database │ │ Backend │ │
+│ └────────────┘ └────────────┘ │
+└────────────────────────────────────────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="security-architecture"&gt;Security Architecture&lt;a class="td-heading-self-link" href="#security-architecture" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="authentication--authorization"&gt;Authentication &amp;amp; Authorization&lt;a class="td-heading-self-link" href="#authentication--authorization" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="jwt-authentication-optional"&gt;JWT Authentication (Optional)&lt;a class="td-heading-self-link" href="#jwt-authentication-optional" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;datamate&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;jwt&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;enable&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Enable JWT authentication&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;secret&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;your-secret-key&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;expiration&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;86400&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 24 hours&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="api-key-authentication"&gt;API Key Authentication&lt;a class="td-heading-self-link" href="#api-key-authentication" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;datamate&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;api-key&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;enable&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;false&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="data-security"&gt;Data Security&lt;a class="td-heading-self-link" href="#data-security" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="transport-encryption"&gt;Transport Encryption&lt;a class="td-heading-self-link" href="#transport-encryption" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;API Gateway supports HTTPS/TLS&lt;/li&gt;
+&lt;li&gt;Internal service communication can be encrypted&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="storage-encryption"&gt;Storage Encryption&lt;a class="td-heading-self-link" href="#storage-encryption" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Database: Transparent data encryption (TDE)&lt;/li&gt;
+&lt;li&gt;MinIO: Server-side encryption&lt;/li&gt;
+&lt;li&gt;Milvus: Encryption at rest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="next-steps"&gt;Next Steps&lt;a class="td-heading-self-link" href="#next-steps" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/development/"&gt;Development Setup&lt;/a&gt; - Local development configuration&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://modelengine-group.github.io/datamate-docs/en/docs/developer-guide/backend-architecture/"&gt;Backend Architecture&lt;/a&gt; - Backend architecture details&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://modelengine-group.github.io/datamate-docs/en/docs/developer-guide/frontend-architecture/"&gt;Frontend Architecture&lt;/a&gt; - Frontend architecture details&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Development Environment Setup</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/development/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;This document describes how to set up a local development environment for DataMate.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="prerequisites"&gt;Prerequisites&lt;a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="required-software"&gt;Required Software&lt;a class="td-heading-self-link" href="#required-software" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Software&lt;/th&gt;
+ &lt;th&gt;Version&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Node.js&lt;/td&gt;
+ &lt;td&gt;18.x+&lt;/td&gt;
+ &lt;td&gt;Frontend development&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;pnpm&lt;/td&gt;
+ &lt;td&gt;8.x+&lt;/td&gt;
+ &lt;td&gt;Frontend package management&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Java&lt;/td&gt;
+ &lt;td&gt;21&lt;/td&gt;
+ &lt;td&gt;Backend development&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Maven&lt;/td&gt;
+ &lt;td&gt;3.9+&lt;/td&gt;
+ &lt;td&gt;Backend build&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Python&lt;/td&gt;
+ &lt;td&gt;3.11+&lt;/td&gt;
+ &lt;td&gt;Python service development&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Docker&lt;/td&gt;
+ &lt;td&gt;20.10+&lt;/td&gt;
+ &lt;td&gt;Containerized deployment&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Docker Compose&lt;/td&gt;
+ &lt;td&gt;2.0+&lt;/td&gt;
+ &lt;td&gt;Service orchestration&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Git&lt;/td&gt;
+ &lt;td&gt;2.x+&lt;/td&gt;
+ &lt;td&gt;Version control&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Make&lt;/td&gt;
+ &lt;td&gt;4.x+&lt;/td&gt;
+ &lt;td&gt;Build automation&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="recommended-software"&gt;Recommended Software&lt;a class="td-heading-self-link" href="#recommended-software" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IDE&lt;/strong&gt;: IntelliJ IDEA (backend) + VS Code (frontend/Python)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Database Client&lt;/strong&gt;: DBeaver, pgAdmin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API Testing&lt;/strong&gt;: Postman, curl&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git Client&lt;/strong&gt;: GitKraken, SourceTree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="code-structure"&gt;Code Structure&lt;a class="td-heading-self-link" href="#code-structure" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;DataMate/
+├── backend/ # Java backend
+│ ├── services/ # Microservice modules
+│ │ ├── main-application/
+│ │ ├── data-management-service/
+│ │ ├── data-cleaning-service/
+│ │ └── ...
+│ ├── openapi/ # OpenAPI specs
+│ └── scripts/ # Build scripts
+├── frontend/ # React frontend
+│ ├── src/
+│ │ ├── components/ # Common components
+│ │ ├── pages/ # Page components
+│ │ ├── services/ # API services
+│ │ ├── store/ # Redux store
+│ │ └── routes/ # Routes config
+│ └── package.json
+├── runtime/ # Python runtime
+│ └── datamate/ # DataMate runtime
+└── deployment/ # Deployment configs
+ ├── docker/ # Docker configs
+ └── helm/ # Helm charts
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="backend-development"&gt;Backend Development&lt;a class="td-heading-self-link" href="#backend-development" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="1-install-java-21"&gt;1. Install Java 21&lt;a class="td-heading-self-link" href="#1-install-java-21" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# macOS (Homebrew)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew install openjdk@21
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Linux (Ubuntu/Debian)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install openjdk-21-jdk
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Verify&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="2-install-maven"&gt;2. Install Maven&lt;a class="td-heading-self-link" href="#2-install-maven" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# macOS&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew install maven
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Linux&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install maven
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Verify&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mvn -version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="3-configure-ide-intellij-idea"&gt;3. Configure IDE (IntelliJ IDEA)&lt;a class="td-heading-self-link" href="#3-configure-ide-intellij-idea" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="install-plugins"&gt;Install Plugins&lt;a class="td-heading-self-link" href="#install-plugins" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Lombok Plugin&lt;/li&gt;
+&lt;li&gt;MyBatis Plugin&lt;/li&gt;
+&lt;li&gt;Rainbow Brackets&lt;/li&gt;
+&lt;li&gt;GitToolBox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="import-project"&gt;Import Project&lt;a class="td-heading-self-link" href="#import-project" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Open IntelliJ IDEA&lt;/li&gt;
+&lt;li&gt;File → Open&lt;/li&gt;
+&lt;li&gt;Select &lt;code&gt;backend&lt;/code&gt; directory&lt;/li&gt;
+&lt;li&gt;Wait for Maven dependency download&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="4-configure-database"&gt;4. Configure Database&lt;a class="td-heading-self-link" href="#4-configure-database" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id="start-local-database-docker"&gt;Start Local Database (Docker)&lt;a class="td-heading-self-link" href="#start-local-database-docker" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Start database only&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker compose -f deployment/docker/datamate/docker-compose.yml up -d datamate-database
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Connection info:&lt;/p&gt;</description></item></channel></rss>

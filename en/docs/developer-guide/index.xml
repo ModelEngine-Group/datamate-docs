@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Developer Guide on DataMate</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/developer-guide/</link><description>Recent content in Developer Guide on DataMate</description><generator>Hugo</generator><language>en</language><atom:link href="https://modelengine-group.github.io/datamate-docs/en/docs/developer-guide/index.xml" rel="self" type="application/rss+xml"/><item><title>Backend Architecture</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/developer-guide/backend-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/developer-guide/backend-architecture/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;DataMate backend adopts microservices architecture built on Spring Boot 3.x and Spring Cloud.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="architecture-overview"&gt;Architecture Overview&lt;a class="td-heading-self-link" href="#architecture-overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;DataMate backend uses microservices architecture, splitting into multiple independent services:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;┌─────────────────────────────────────────────┐
+│ API Gateway │
+│ (Spring Cloud Gateway) │
+│ Port: 8080 │
+└──────────────┬──────────────────────────────┘
+ │
+ ┌───────┴───────┬───────────────┐
+ ▼ ▼ ▼
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ Main │ │ Data │ │ Data │
+│ Application │ │ Management │ │ Collection │
+└──────────────┘ └──────────────┘ └──────────────┘
+ │ │ │
+ └───────────────┴───────────────┘
+ │
+ ▼
+ ┌────────────────┐
+ │ PostgreSQL │
+ │ Port: 5432 │
+ └────────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="tech-stack"&gt;Tech Stack&lt;a class="td-heading-self-link" href="#tech-stack" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="core-frameworks"&gt;Core Frameworks&lt;a class="td-heading-self-link" href="#core-frameworks" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Technology&lt;/th&gt;
+ &lt;th&gt;Version&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Java&lt;/td&gt;
+ &lt;td&gt;21&lt;/td&gt;
+ &lt;td&gt;Programming language&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Spring Boot&lt;/td&gt;
+ &lt;td&gt;3.5.6&lt;/td&gt;
+ &lt;td&gt;Application framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Spring Cloud&lt;/td&gt;
+ &lt;td&gt;2023.x&lt;/td&gt;
+ &lt;td&gt;Microservices framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MyBatis Plus&lt;/td&gt;
+ &lt;td&gt;3.5.x&lt;/td&gt;
+ &lt;td&gt;ORM framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="support-components"&gt;Support Components&lt;a class="td-heading-self-link" href="#support-components" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Technology&lt;/th&gt;
+ &lt;th&gt;Version&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Redis&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;Cache and message queue&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MinIO&lt;/td&gt;
+ &lt;td&gt;8.x&lt;/td&gt;
+ &lt;td&gt;Object storage&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Milvus SDK&lt;/td&gt;
+ &lt;td&gt;2.3.x&lt;/td&gt;
+ &lt;td&gt;Vector database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="microservices-list"&gt;Microservices List&lt;a class="td-heading-self-link" href="#microservices-list" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="api-gateway"&gt;API Gateway&lt;a class="td-heading-self-link" href="#api-gateway" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Port&lt;/strong&gt;: 8080&lt;/p&gt;</description></item><item><title>Frontend Architecture</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/developer-guide/frontend-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/developer-guide/frontend-architecture/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;DataMate frontend is built on React 18 and TypeScript with modern frontend architecture.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="architecture-overview"&gt;Architecture Overview&lt;a class="td-heading-self-link" href="#architecture-overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;DataMate frontend adopts SPA architecture:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;┌─────────────────────────────────────────────┐
+│ Browser │
+└──────────────────┬──────────────────────────┘
+ │
+ ▼
+┌─────────────────────────────────────────────┐
+│ React App │
+│ ┌──────────────────────────────────────┐ │
+│ │ Components │ │
+│ └──────────────────────────────────────┘ │
+│ ┌──────────────────────────────────────┐ │
+│ │ State Management │ │
+│ │ (Redux Toolkit) │ │
+│ └──────────────────────────────────────┘ │
+│ ┌──────────────────────────────────────┐ │
+│ │ Services (API) │ │
+│ └──────────────────────────────────────┘ │
+│ ┌──────────────────────────────────────┐ │
+│ │ Routing │ │
+│ └──────────────────────────────────────┘ │
+└─────────────────────────────────────────────┘
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="tech-stack"&gt;Tech Stack&lt;a class="td-heading-self-link" href="#tech-stack" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="core-frameworks"&gt;Core Frameworks&lt;a class="td-heading-self-link" href="#core-frameworks" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Technology&lt;/th&gt;
+ &lt;th&gt;Version&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;React&lt;/td&gt;
+ &lt;td&gt;18.x&lt;/td&gt;
+ &lt;td&gt;UI framework&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;TypeScript&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;Type safety&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Ant Design&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;UI components&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Tailwind CSS&lt;/td&gt;
+ &lt;td&gt;3.x&lt;/td&gt;
+ &lt;td&gt;Styling&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="state-management"&gt;State Management&lt;a class="td-heading-self-link" href="#state-management" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Technology&lt;/th&gt;
+ &lt;th&gt;Version&lt;/th&gt;
+ &lt;th&gt;Purpose&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Redux Toolkit&lt;/td&gt;
+ &lt;td&gt;2.x&lt;/td&gt;
+ &lt;td&gt;Global state&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;React Query&lt;/td&gt;
+ &lt;td&gt;5.x&lt;/td&gt;
+ &lt;td&gt;Server state&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="project-structure"&gt;Project Structure&lt;a class="td-heading-self-link" href="#project-structure" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;frontend/
+├── src/
+│ ├── components/ # Common components
+│ ├── pages/ # Page components
+│ ├── services/ # API services
+│ ├── store/ # Redux store
+│ ├── hooks/ # Custom hooks
+│ ├── routes/ # Routes config
+│ └── main.tsx # Entry point
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="routing-design"&gt;Routing Design&lt;a class="td-heading-self-link" href="#routing-design" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;router&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000"&gt;createBrowserRouter&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;([&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt; &lt;span style="color:#000"&gt;path&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt; &lt;span style="color:#000"&gt;Component&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;Home&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt; &lt;span style="color:#000"&gt;path&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;/chat&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt; &lt;span style="color:#000"&gt;Component&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;AgentPage&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;path&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;/data&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;Component&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;MainLayout&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;children&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;path&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;management&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;Component&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;DatasetManagement&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;]);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="state-management-1"&gt;State Management&lt;a class="td-heading-self-link" href="#state-management-1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="redux-toolkit-configuration"&gt;Redux Toolkit Configuration&lt;a class="td-heading-self-link" href="#redux-toolkit-configuration" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;export&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;store&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000"&gt;configureStore&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;({&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;reducer&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;dataManagement&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;dataManagementSlice&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;user&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;userSlice&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="slice-example"&gt;Slice Example&lt;a class="td-heading-self-link" href="#slice-example" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;export&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;fetchDatasets&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000"&gt;createAsyncThunk&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#39;dataManagement/fetchDatasets&amp;#39;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;async&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#000"&gt;params&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;GetDatasetsParams&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;)&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;response&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;await&lt;/span&gt; &lt;span style="color:#000"&gt;getDatasets&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#000"&gt;params&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;return&lt;/span&gt; &lt;span style="color:#000"&gt;response&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;data&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="component-design"&gt;Component Design&lt;a class="td-heading-self-link" href="#component-design" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="page-component"&gt;Page Component&lt;a class="td-heading-self-link" href="#page-component" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;export&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;DataManagement&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;React.FC&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;()&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;dispatch&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000"&gt;useAppDispatch&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt; &lt;span style="color:#000"&gt;datasets&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt; &lt;span style="color:#000"&gt;loading&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000"&gt;useAppSelector&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#000"&gt;state&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;)&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#000"&gt;state&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;dataManagement&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;useEffect&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(()&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;dispatch&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#000"&gt;fetchDatasets&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;({&lt;/span&gt; &lt;span style="color:#000"&gt;page&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;0&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt; &lt;span style="color:#000"&gt;size&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;20&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}));&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;},&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#000"&gt;dispatch&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;]);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;return&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;div&lt;/span&gt; &lt;span style="color:#c4a000"&gt;className&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;p-6&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;h1&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#000"&gt;Data&lt;/span&gt; &lt;span style="color:#000"&gt;Management&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;h1&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;DataTable&lt;/span&gt; &lt;span style="color:#c4a000"&gt;data&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;&lt;span style="color:#000"&gt;datasets&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt; &lt;span style="color:#c4a000"&gt;loading&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;&lt;span style="color:#000"&gt;loading&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;div&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="api-services"&gt;API Services&lt;a class="td-heading-self-link" href="#api-services" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="axios-configuration"&gt;Axios Configuration&lt;a class="td-heading-self-link" href="#axios-configuration" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;request&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000"&gt;axios&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;create&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;({&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;baseURL&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;import.meta.env.VITE_API_BASE_URL&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;timeout&lt;/span&gt;: &lt;span style="color:#204a87;font-weight:bold"&gt;30000&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;// Request interceptor
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;request&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;interceptors&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;request&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;use&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;((&lt;/span&gt;&lt;span style="color:#000"&gt;config&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;)&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;token&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000"&gt;localStorage&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;getItem&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;token&amp;#39;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;if&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#000"&gt;token&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;)&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;config&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;headers&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;Authorization&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;`Bearer &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;${&lt;/span&gt;&lt;span style="color:#000"&gt;token&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;}&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;`&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;return&lt;/span&gt; &lt;span style="color:#000"&gt;config&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="performance-optimization"&gt;Performance Optimization&lt;a class="td-heading-self-link" href="#performance-optimization" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="code-splitting"&gt;Code Splitting&lt;a class="td-heading-self-link" href="#code-splitting" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;DataManagement&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000"&gt;lazy&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(()&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;import&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;@/pages/DataManagement/Home/DataManagement&amp;#39;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="reactmemo"&gt;React.memo&lt;a class="td-heading-self-link" href="#reactmemo" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-typescript" data-lang="typescript"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;export&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;const&lt;/span&gt; &lt;span style="color:#000"&gt;DataCard&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#000"&gt;React&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;memo&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;DataCardProps&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;&amp;gt;(({&lt;/span&gt; &lt;span style="color:#000"&gt;data&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;})&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&amp;gt;&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;return&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;div&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;&amp;gt;{&lt;/span&gt;&lt;span style="color:#000"&gt;data&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;}&amp;lt;/&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;div&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;&amp;gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="related-documentation"&gt;Related Documentation&lt;a class="td-heading-self-link" href="#related-documentation" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://modelengine-group.github.io/datamate-docs/en/docs/developer-guide/backend-architecture/"&gt;Backend Architecture&lt;/a&gt; - Backend architecture&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://modelengine-group.github.io/datamate-docs/en/docs/getting-started/development/"&gt;Development Setup&lt;/a&gt; - Dev environment&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
