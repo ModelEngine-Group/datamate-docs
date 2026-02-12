@@ -45,7 +45,7 @@ Data cleaning module provides:
 
 #### Step 1: Enter Data Cleaning Page
 
-Select **Data** → **Data Cleaning** in left navigation.
+Select **Data Processing** in the left navigation.
 
 #### Step 2: Create Task
 

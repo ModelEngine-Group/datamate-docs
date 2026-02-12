@@ -42,7 +42,7 @@ Data evaluation module provides:
 
 #### Step 1: Enter Data Evaluation Page
 
-Select **Data** → **Data Evaluation**.
+Select **Data Evaluation** in the left navigation.
 
 #### Step 2: Create Task
 

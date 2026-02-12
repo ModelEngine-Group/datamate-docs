@@ -24,7 +24,7 @@ Data synthesis module provides:
 
 #### Step 1: Enter Data Synthesis Page
 
-In left navigation, select **Data** → **Data Synthesis** → **Tasks**.
+In the left navigation, select **Data Synthesis** → **Synthesis Tasks**.
 
 #### Step 2: Create Instruction Template
 
@@ -105,7 +105,34 @@ Configure according to template parameters:
 
 Click **Create** button. Task will automatically start executing.
 
-### 3. Monitor Synthesis Task
+### 3. Create Ratio Synthesis Task
+
+Ratio synthesis tasks are used to synthesize multi-category balanced data in specified proportions.
+
+#### Step 1: Create Ratio Task
+
+1. In the left navigation, select **Data Synthesis** → **Ratio Tasks**
+2. Click **Create Task** button
+
+#### Step 2: Configure Task
+
+**Basic Information**:
+- **Task name**: e.g., `balanced_dataset_synthesis`
+- **Task description**: Describe task purpose
+
+**Category Configuration**:
+
+| Category | Ratio | Instruction Template | Count |
+|----------|-------|---------------------|-------|
+| Positive | 40% | positive_template | 400 |
+| Negative | 30% | negative_template | 300 |
+| Neutral | 30% | neutral_template | 300 |
+
+#### Step 3: Execute Task
+
+Click **Create** button. The system will generate data for each category according to the specified ratio.
+
+### 4. Monitor Synthesis Task
 
 #### View Task List
 

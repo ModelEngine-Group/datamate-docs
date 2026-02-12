@@ -22,9 +22,18 @@ Based on [DataX](https://github.com/alibaba/DataX), data collection module suppo
 
 | Data Source Type | Reader | Writer | Description |
 |------------------|--------|--------|-------------|
+| General Relational Databases | ✅ | ✅ | Supports MySQL, PostgreSQL, OpenGauss, SQL Server, DM, DB2 |
 | MySQL | ✅ | ✅ | Relational database |
 | PostgreSQL | ✅ | ✅ | Relational database |
-| Oracle | ✅ | ✅ | Enterprise database |
+| OpenGauss | ✅ | ✅ | Relational database |
+| SQL Server | ✅ | ✅ | Microsoft database |
+| DM (Dameng) | ✅ | ✅ | Domestic database |
+| DB2 | ✅ | ✅ | IBM database |
+| StarRocks | ✅ | ✅ | Analytical database |
+| NAS | ✅ | ✅ | Network storage |
+| S3 | ✅ | ✅ | Object storage |
+| GlusterFS | ✅ | ✅ | Distributed file system |
+| API Collection | ✅ | ✅ | API interface data |
 | JSON Files | ✅ | ✅ | JSON format files |
 | CSV Files | ✅ | ✅ | CSV format files |
 | TXT Files | ✅ | ✅ | Text files |
@@ -37,7 +46,7 @@ Based on [DataX](https://github.com/alibaba/DataX), data collection module suppo
 
 #### Step 1: Enter Data Collection Page
 
-Select **Data** → **Data Collection** in left navigation.
+Select **Data Collection** in the left navigation.
 
 #### Step 2: Create Task
 
@@ -58,6 +67,11 @@ Select the task synchronization mode:
 - **Immediate Sync**: Execute once immediately after task creation
 - **Scheduled Sync**: Execute periodically according to schedule rules
 
+When selecting **Scheduled Sync**, configure the execution policy:
+
+- **Execution Cycle**: Hourly / Daily / Weekly / Monthly
+- **Execution Time**: Select the execution time point
+
 #### Step 5: Configure Data Source
 
 **Select data source type**: Choose from dropdown list (e.g., MySQL, CSV, etc.)
@@ -70,34 +84,14 @@ Select the task synchronization mode:
 - Password: `password`
 - Table Name: `users`
 
-**CSV File Example**:
-- File Path: `/data/input.csv`
-- Encoding: `UTF-8`
-- Delimiter: `,`
-- Has Header: Yes/No
+#### Step 6: Configure Field Extraction
 
-#### Step 6: Configure Field Mapping
+Field mapping is not supported. You can only extract specific fields from the configured SQL.
 
-Map source fields to target fields:
+- **Extract specific fields**: Enter the field names you want to extract in the field list
+- **Extract all fields**: Leave the field list empty to extract all fields from the SQL query result
 
-| Source Field | Target Field | Type Conversion |
-|-------------|--------------|-----------------|
-| id | user_id | Long → Long |
-| name | username | String → String |
-| email | email | String → String |
-
-#### Step 7: Configure Execution Strategy
-
-- **Concurrency**: Number of concurrent channels (default 1)
-
-When selecting **Scheduled Sync**, configure schedule rules:
-
-- **Cron Expression**: e.g., `0 0 2 * * ?` for daily at 2 AM
-- Or use quick setup form:
-  - Frequency: Hourly / Daily / Weekly / Monthly
-  - Specific time: Select execution time point
-
-#### Step 8: Create and Execute
+#### Step 7: Create and Execute
 
 Click **Create** button to create the task.
 - If **Immediate Sync** is selected, task starts immediately
@@ -118,50 +112,6 @@ Click the task name to view task details including:
 - Basic configuration
 - Execution record list
 - Data statistics
-
-### DataX Configuration Template
-
-Basic structure:
-```json
-{
-  "job": {
-    "content": [{
-      "reader": {
-        "name": "mysqlreader",
-        "parameter": { ... }
-      },
-      "writer": {
-        "name": "txtfilewriter",
-        "parameter": { ... }
-      }
-    }],
-    "setting": {
-      "speed": {
-        "channel": 1,
-        "byte": 1048576
-      }
-    }
-  }
-}
-```
-
-### Scheduled Tasks
-
-Use Cron expressions for scheduled execution:
-
-| Expression | Description |
-|-----------|-------------|
-| `0 0 2 * * ?` | Daily at 2 AM |
-| `0 0 */2 * * ?` | Every 2 hours |
-| `0 0 12 * * ?` | Daily at noon |
-
-### Concurrent Control
-
-| Parameter | Description | Recommended |
-|-----------|-------------|-------------|
-| channel | Concurrent channels | 1-5 |
-| byte | Byte limit | 1048576 (1MB) |
-| record | Record limit | 100000 |
 
 ## Common Questions
 

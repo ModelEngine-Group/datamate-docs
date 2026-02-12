@@ -41,7 +41,7 @@ Operator marketplace provides:
 
 #### Step 1: Enter Operator Market
 
-Select **Data** → **Operator Market**.
+Select **Operator Market** in the left navigation.
 
 #### Step 2: Browse Operators
 
