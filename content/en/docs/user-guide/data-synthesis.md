@@ -75,35 +75,97 @@ Click **Save** button to save template.
 
 ### 2. Create Synthesis Task
 
-#### Step 1: Create Task
+#### Step 1: Fill Basic Information
 
 1. Return to **Data Synthesis** page
 2. Click **Create Task** button
+3. Fill basic information:
+   - **Task name**: e.g., `medical_qa_synthesis`
+   - **Task description**: Describe task purpose (optional)
 
-#### Step 2: Configure Basic Information
+#### Step 2: Select Dataset and Files
 
-- **Task name**: e.g., `medical_qa_synthesis`
-- **Task description**: Describe task purpose (optional)
-- **Select template**: Select created instruction template
+Select required data from existing datasets:
 
-#### Step 3: Configure Parameters
+- **Select dataset**: Choose the dataset to use from the list
+- **Select files**:
+  - Can select all files from a dataset
+  - Can also select specific files from a dataset
+  - Support selecting multiple files
 
-Configure according to template parameters:
+#### Step 3: Select Synthesis Instruction Template
 
-| Parameter | Value | Description |
-|-----------|-------|-------------|
-| topic | Medical health | Synthesis topic |
-| count | 100 | Generation count |
-| difficulty | Medium | Difficulty level |
+Select an existing template or create a new one:
 
-#### Step 4: Configure Output
+- **Select from template library**: Choose from created templates
+- **Template type**: Q&A generation, dialogue generation, summary generation, etc.
+- **Preview template**: View template prompt content
 
-- **Output dataset**: Select or create output dataset
-- **Output format**: Select output format (JSON, CSV, JSONL, etc.)
+#### Step 4: Fill Synthesis Configuration
 
-#### Step 5: Create and Execute
+The synthesis configuration consists of four parts:
 
-Click **Create** button. Task will automatically start executing.
+**1. Set Total Synthesis Count**
+
+Set the maximum limit for the entire task:
+
+| Parameter | Description | Default Value | Range |
+|-----------|-------------|----------------|--------|
+| Maximum QA Pairs | Maximum number of QA pairs to generate for entire task | 5000 | 1-100,000 |
+
+This setting is optional, used for total volume control in large-scale synthesis tasks.
+
+**2. Configure Text Chunking Strategy**
+
+Chunk the input text files, supporting multiple chunking methods:
+
+| Parameter | Description | Default Value |
+|-----------|-------------|---------------|
+| Chunking Method | Select chunking strategy | Default chunking |
+| Chunk Size | Character count per chunk | 3000 |
+| Overlap Size | Overlap characters between adjacent chunks | 100 |
+
+**Chunking Method Options**:
+- **Default Chunking (默认分块)**: Use system default intelligent chunking strategy
+- **Chapter-based Chunking (按章节分块)**: Split by chapter structure
+- **Paragraph-based Chunking (按段落分块)**: Split by paragraph boundaries
+- **Fixed Length Chunking (固定长度分块)**: Split by fixed character length
+- **Custom Separator Chunking (自定义分隔符分块)**: Split by custom delimiter
+
+**3. Configure Question Synthesis Parameters**
+
+Set parameters for question generation:
+
+| Parameter | Description | Default Value | Range |
+|-----------|-------------|----------------|--------|
+| Question Count | Number of questions generated per chunk | 1 | 1-20 |
+| Temperature | Control randomness and diversity of question generation | 0.7 | 0-2 |
+| Model | Select CHAT model for question generation | - | Select from model list |
+
+**Parameter Notes**:
+- **Question Count**: Number of questions generated per text chunk. Higher value generates more questions.
+- **Temperature**: Higher values produce more diverse questions, lower values produce more stable questions.
+
+**4. Configure Answer Synthesis Parameters**
+
+Set parameters for answer generation:
+
+| Parameter | Description | Default Value | Range |
+|-----------|-------------|----------------|--------|
+| Temperature | Control stability of answer generation | 0.7 | 0-2 |
+| Model | Select CHAT model for answer generation | - | Select from model list |
+
+**Parameter Notes**:
+- **Temperature**: Lower values produce more conservative and accurate answers, higher values produce more diverse and creative answers.
+
+**Synthesis Types**:
+The system supports two synthesis types:
+- **SFT Q&A Synthesis (SFT 问答数据合成)**: Generate Q&A pairs for supervised fine-tuning
+- **COT Chain-of-Thought Synthesis (COT 链式推理合成)**: Generate data with reasoning process
+
+#### Step 5: Start Task
+
+Click **Start Task** button, task will automatically start executing.
 
 ### 3. Create Ratio Synthesis Task
 
@@ -114,23 +176,66 @@ Ratio synthesis tasks are used to synthesize multi-category balanced data in spe
 1. In the left navigation, select **Data Synthesis** → **Ratio Tasks**
 2. Click **Create Task** button
 
-#### Step 2: Configure Task
+#### Step 2: Fill Basic Information
 
-**Basic Information**:
-- **Task name**: e.g., `balanced_dataset_synthesis`
-- **Task description**: Describe task purpose
+| Parameter | Description | Required |
+|-----------|-------------|-----------|
+| Task Name | Unique identifier for the task | Yes |
+| Total Target Count | Target total count for entire ratio task | Yes |
+| Task Description | Describe purpose and requirements of ratio task | No |
 
-**Category Configuration**:
+**Example**:
+- Task name: `balanced_dataset_synthesis`
+- Total target count: 10000
+- Task description: Generate balanced data for training and validation sets
 
-| Category | Ratio | Instruction Template | Count |
-|----------|-------|---------------------|-------|
-| Positive | 40% | positive_template | 400 |
-| Negative | 30% | negative_template | 300 |
-| Neutral | 30% | neutral_template | 300 |
+#### Step 3: Select Datasets
 
-#### Step 3: Execute Task
+Select datasets to participate in the ratio synthesis from existing datasets:
 
-Click **Create** button. The system will generate data for each category according to the specified ratio.
+**Dataset Selection Features**:
+- **Search Datasets**: Search datasets by keyword
+- **Multi-select Support**: Can select multiple datasets simultaneously
+- **Dataset Information**: Display detailed information for each dataset
+  - Dataset name and type
+  - Dataset description
+  - File count
+  - Dataset size
+  - Label distribution preview (up to 8 labels)
+
+After selecting datasets, the system automatically loads label distribution information for each dataset.
+
+#### Step 4: Fill Ratio Configuration
+
+Configure specific synthesis rules for each selected dataset:
+
+**Ratio Configuration Items**:
+
+| Parameter | Description | Range |
+|-----------|-------------|--------|
+| Label | Select label from dataset's label distribution | Based on dataset labels |
+| Label Value | Specific value under selected label | Based on label value list |
+| Label Update Time | Select label update date range (optional) | Date picker |
+| Quantity | Data count to generate for this config | 0 to total target count |
+
+**Feature Notes**:
+- **Auto Distribute**: Click "Auto Distribute" button, system automatically distributes total count evenly across datasets
+- **Quantity Limit**: Each configuration item's quantity cannot exceed the dataset's total file count
+- **Percentage Calculation**: System automatically calculates percentage of each configuration item
+- **Delete Configuration**: Can delete unwanted configuration items
+- **Add Configuration**: Each dataset can have multiple different label configurations
+
+**Example Configuration**:
+
+| Dataset | Label | Label Value | Label Update Time | Quantity |
+|----------|-------|--------------|-------------------|----------|
+| Training Dataset | Category | Training | - | 6000 |
+| Training Dataset | Category | Validation | - | 2000 |
+| Test Dataset | Category | Test | 2024-01-01 to 2024-12-31 | 2000 |
+
+#### Step 5: Execute Task
+
+Click **Start Task** button, the system will create and execute the task according to ratio configuration.
 
 ### 4. Monitor Synthesis Task
 
