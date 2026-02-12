@@ -55,7 +55,7 @@ Default credentials:
 
 #### Step 1: Enter Data Annotation Page
 
-Select **Data** → **Data Annotation**.
+Select **Data Annotation** in the left navigation.
 
 #### Step 2: Create Task
 

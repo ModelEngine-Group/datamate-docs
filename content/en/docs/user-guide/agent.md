@@ -58,7 +58,7 @@ User: How to create a data cleaning task?
 
 Assistant: According to the knowledge base documentation:
 
-1. Enter data cleaning page (Data → Data Cleaning)
+1. Enter data processing page
 2. Click create task button
 3. Configure basic information
 4. Configure cleaning pipeline (drag operators to canvas)

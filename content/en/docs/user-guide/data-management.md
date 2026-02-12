@@ -34,7 +34,7 @@ Data management module provides:
 
 #### Step 1: Enter Data Management Page
 
-In the left navigation, select **Data** → **Data Management**.
+In the left navigation, select **Data Management**.
 
 #### Step 2: Create Dataset
 
@@ -47,12 +47,7 @@ Click the **Create Dataset** button in the upper right corner.
 - **Description**: Dataset purpose description (optional)
 - **Tags**: Add tags for categorization (optional)
 
-#### Step 4: Configure Storage Location (Optional)
-
-- **Data source**: Data origin (optional)
-- **Target location**: Storage path (optional)
-
-#### Step 5: Create Dataset
+#### Step 4: Create Dataset
 
 Click the **Create** button to complete.
 
@@ -112,9 +107,10 @@ user_images_dataset/
 
 In dataset details page, you can see all files:
 
-| Filename | Size | Type | Status | Upload Time | Actions |
-|----------|------|------|--------|-------------|---------|
-| image1.jpg | 2.3 MB | JPG | Completed | 2024-01-15 | Preview Download Delete |
+| Filename | Size | File Count | Upload Time | Tags | Tag Update Time | Actions |
+|----------|------|------------|-------------|------|-----------------|---------|
+| image1.jpg | 2.3 MB | 1 | 2024-01-15 | Training Set | 2024-01-16 | Download Rename Delete |
+| image2.png | 1.8 MB | 1 | 2024-01-15 | Validation Set | 2024-01-16 | Download Rename Delete |
 
 #### Preview File
 
@@ -128,8 +124,8 @@ Click **Preview** button to preview in browser:
 #### Download File
 
 - **Single file download**: Click **Download** button
-- **Batch download**: Select multiple files, click **Batch Download**
-- **Package download**: Click **Download All**, download as ZIP
+
+Currently, batch download and package download are not supported.
 
 ### 5. Dataset Operations
 
@@ -139,18 +135,15 @@ In dataset details page, you can see:
 
 - **Total files**: Total number of files in dataset
 - **Total size**: Total size of all files
-- **Completion rate**: File upload completion percentage
-- **File type distribution**: Count of each file type
-- **Status distribution**: Count of each status
 
 #### Edit Dataset
 
 Click **Edit** button to modify:
 
-- Dataset name
-- Description
-- Tags
-- Status
+- **Dataset name**
+- **Description**
+- **Tags**
+- **Associated collection task**
 
 #### Delete Dataset
 
@@ -166,10 +159,7 @@ Click **Delete** button to delete entire dataset.
 
 1. In dataset list page, click **Tag Management**
 2. Click **Create Tag**
-3. Enter tag information:
-   - Tag name
-   - Tag color
-   - Description (optional)
+3. Enter tag name
 
 #### Use Tags
 
@@ -180,25 +170,6 @@ Click **Delete** button to delete entire dataset.
 #### Filter by Tags
 
 In dataset list page, click tags to filter datasets with that tag.
-
-### File Search
-
-#### Keyword Search
-
-Enter keyword in search box, supports searching:
-
-- Filename
-- File description
-- Tags
-
-#### Advanced Search
-
-Click **Advanced Search** to:
-
-- Filter by file type
-- Filter by upload time
-- Filter by file size
-- Filter by status
 
 ## Best Practices
 
@@ -229,6 +200,14 @@ Recommended tag categories:
 - **Status tags**: `raw`, `processed`, `validated`
 - **Type tags**: `image`, `text`, `audio`
 - **Purpose tags**: `training`, `testing`, `evaluation`
+
+### 4. Data Backup
+
+The system currently does not support automatic backup. To backup data, you can manually download individual files:
+
+1. Enter dataset details page
+2. Find the file you need to backup
+3. Click the **Download** button of the file
 
 ## Common Questions
 

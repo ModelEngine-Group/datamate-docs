@@ -35,7 +35,7 @@ Knowledge base management module provides:
 
 #### Step 1: Enter Knowledge Base Page
 
-In left navigation, select **Data** → **Knowledge Base**.
+In the left navigation, select **Knowledge Generation**.
 
 #### Step 2: Create Knowledge Base
 
