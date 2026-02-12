@@ -24,6 +24,12 @@
  &lt;/thead&gt;
  &lt;tbody&gt;
  &lt;tr&gt;
+ &lt;td&gt;General Relational Databases&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Supports MySQL, PostgreSQL, OpenGauss, SQL Server, DM, DB2&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
  &lt;td&gt;MySQL&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
@@ -36,10 +42,58 @@
  &lt;td&gt;Relational database&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
- &lt;td&gt;Oracle&lt;/td&gt;
+ &lt;td&gt;OpenGauss&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
- &lt;td&gt;Enterprise database&lt;/td&gt;
+ &lt;td&gt;Relational database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;SQL Server&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Microsoft database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;DM (Dameng)&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Domestic database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;DB2&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;IBM database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;StarRocks&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Analytical database&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;NAS&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Network storage&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;S3&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Object storage&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;GlusterFS&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;Distributed file system&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;API Collection&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;API interface data&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;JSON Files&lt;/td&gt;
@@ -76,7 +130,7 @@
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-create-collection-task"&gt;1. Create Collection Task&lt;a class="td-heading-self-link" href="#1-create-collection-task" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="step-1-enter-data-collection-page"&gt;Step 1: Enter Data Collection Page&lt;a class="td-heading-self-link" href="#step-1-enter-data-collection-page" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Select &lt;strong&gt;Data&lt;/strong&gt; → &lt;strong&gt;Data Collection&lt;/strong&gt; in left navigation.&lt;/p&gt;</description></item><item><title>Data Management</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-management/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;Select &lt;strong&gt;Data Collection&lt;/strong&gt; in the left navigation.&lt;/p&gt;</description></item><item><title>Data Management</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-management/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;Data management module provides unified dataset management capabilities, supporting multiple data types for storage, query, and operations.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -130,7 +184,7 @@
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-create-dataset"&gt;1. Create Dataset&lt;a class="td-heading-self-link" href="#1-create-dataset" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="step-1-enter-data-management-page"&gt;Step 1: Enter Data Management Page&lt;a class="td-heading-self-link" href="#step-1-enter-data-management-page" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;In the left navigation, select &lt;strong&gt;Data&lt;/strong&gt; → &lt;strong&gt;Data Management&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Data Cleaning</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-cleansing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-cleansing/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;In the left navigation, select &lt;strong&gt;Data Management&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Data Cleaning</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-cleansing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-cleansing/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;Data cleaning module provides powerful data processing capabilities to help you clean, transform, and optimize data quality.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -211,7 +265,7 @@
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-create-cleaning-task"&gt;1. Create Cleaning Task&lt;a class="td-heading-self-link" href="#1-create-cleaning-task" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="step-1-enter-data-cleaning-page"&gt;Step 1: Enter Data Cleaning Page&lt;a class="td-heading-self-link" href="#step-1-enter-data-cleaning-page" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Select &lt;strong&gt;Data&lt;/strong&gt; → &lt;strong&gt;Data Cleaning&lt;/strong&gt; in left navigation.&lt;/p&gt;</description></item><item><title>Data Annotation</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-annotation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-annotation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;Select &lt;strong&gt;Data Processing&lt;/strong&gt; in the left navigation.&lt;/p&gt;</description></item><item><title>Data Annotation</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-annotation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-annotation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;Data annotation module integrates Label Studio to provide professional-grade data annotation capabilities.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -305,7 +359,7 @@
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-create-instruction-template"&gt;1. Create Instruction Template&lt;a class="td-heading-self-link" href="#1-create-instruction-template" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="step-1-enter-data-synthesis-page"&gt;Step 1: Enter Data Synthesis Page&lt;a class="td-heading-self-link" href="#step-1-enter-data-synthesis-page" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;In left navigation, select &lt;strong&gt;Data&lt;/strong&gt; → &lt;strong&gt;Data Synthesis&lt;/strong&gt; → &lt;strong&gt;Tasks&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Data Evaluation</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-evaluation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;In the left navigation, select &lt;strong&gt;Data Synthesis&lt;/strong&gt; → &lt;strong&gt;Synthesis Tasks&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Data Evaluation</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/data-evaluation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;Data evaluation module provides multi-dimensional data quality evaluation capabilities.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -377,7 +431,7 @@
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-create-evaluation-task"&gt;1. Create Evaluation Task&lt;a class="td-heading-self-link" href="#1-create-evaluation-task" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="step-1-enter-data-evaluation-page"&gt;Step 1: Enter Data Evaluation Page&lt;a class="td-heading-self-link" href="#step-1-enter-data-evaluation-page" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Select &lt;strong&gt;Data&lt;/strong&gt; → &lt;strong&gt;Data Evaluation&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Knowledge Base Management</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/knowledge-base/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/knowledge-base/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;Select &lt;strong&gt;Data Evaluation&lt;/strong&gt; in the left navigation.&lt;/p&gt;</description></item><item><title>Knowledge Base Management</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/knowledge-base/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/knowledge-base/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;Knowledge base management module helps you build enterprise knowledge bases for efficient vector retrieval and RAG applications.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -436,7 +490,7 @@
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-create-knowledge-base"&gt;1. Create Knowledge Base&lt;a class="td-heading-self-link" href="#1-create-knowledge-base" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="step-1-enter-knowledge-base-page"&gt;Step 1: Enter Knowledge Base Page&lt;a class="td-heading-self-link" href="#step-1-enter-knowledge-base-page" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;In left navigation, select &lt;strong&gt;Data&lt;/strong&gt; → &lt;strong&gt;Knowledge Base&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Operator Market</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/operator-market/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/operator-market/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;In the left navigation, select &lt;strong&gt;Knowledge Generation&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Operator Market</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/operator-market/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/operator-market/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;Operator marketplace provides rich data processing operators and supports custom operator development.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -507,7 +561,7 @@
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-browse-operators"&gt;1. Browse Operators&lt;a class="td-heading-self-link" href="#1-browse-operators" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="step-1-enter-operator-market"&gt;Step 1: Enter Operator Market&lt;a class="td-heading-self-link" href="#step-1-enter-operator-market" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Select &lt;strong&gt;Data&lt;/strong&gt; → &lt;strong&gt;Operator Market&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Pipeline Orchestration</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/orchestration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/orchestration/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;Select &lt;strong&gt;Operator Market&lt;/strong&gt; in the left navigation.&lt;/p&gt;</description></item><item><title>Pipeline Orchestration</title><link>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/orchestration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/en/docs/user-guide/orchestration/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;Pipeline orchestration module provides drag-and-drop visual interface for designing and managing complex data processing workflows.&lt;/p&gt;
 
 &lt;/div&gt;

@@ -24,6 +24,12 @@
  &lt;/thead&gt;
  &lt;tbody&gt;
  &lt;tr&gt;
+ &lt;td&gt;通用关系型数据库&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;支持 MySQL、PostgreSQL、OpenGauss、SQL Server、达梦、DB2&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
  &lt;td&gt;MySQL&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
@@ -36,16 +42,58 @@
  &lt;td&gt;关系型数据库&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
- &lt;td&gt;Oracle&lt;/td&gt;
+ &lt;td&gt;OpenGauss&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
- &lt;td&gt;企业级数据库&lt;/td&gt;
+ &lt;td&gt;关系型数据库&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;SQL Server&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
  &lt;td&gt;✅&lt;/td&gt;
  &lt;td&gt;微软数据库&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;达梦&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;国产数据库&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;DB2&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;IBM 数据库&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;StarRocks&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;分析型数据库&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;NAS&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;网络存储&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;S3&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;对象存储&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;GlusterFS&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;分布式文件系统&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;API 归集&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;✅&lt;/td&gt;
+ &lt;td&gt;API 接口数据&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;JSON 文件&lt;/td&gt;
@@ -81,8 +129,8 @@
 &lt;/table&gt;
 &lt;h2 id="快速开始"&gt;快速开始&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-创建采集任务"&gt;1. 创建采集任务&lt;a class="td-heading-self-link" href="#1-%e5%88%9b%e5%bb%ba%e9%87%87%e9%9b%86%e4%bb%bb%e5%8a%a1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;h4 id="步骤-1进入数据采集页面"&gt;步骤 1：进入数据采集页面&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-1%e8%bf%9b%e5%85%a5%e6%95%b0%e6%8d%ae%e9%87%87%e9%9b%86%e9%a1%b5%e9%9d%a2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据&lt;/strong&gt; → &lt;strong&gt;数据采集&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>数据管理</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-management/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;h4 id="步骤-1进入数据归集页面"&gt;步骤 1：进入数据归集页面&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-1%e8%bf%9b%e5%85%a5%e6%95%b0%e6%8d%ae%e5%bd%92%e9%9b%86%e9%a1%b5%e9%9d%a2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据归集&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>数据管理</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-management/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;数据管理模块提供统一的数据集管理能力，支持多种数据类型的存储、查询和操作。&lt;/p&gt;
 
 &lt;/div&gt;
@@ -136,7 +184,7 @@
 &lt;h2 id="快速开始"&gt;快速开始&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-创建数据集"&gt;1. 创建数据集&lt;a class="td-heading-self-link" href="#1-%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e9%9b%86" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="步骤-1进入数据管理页面"&gt;步骤 1：进入数据管理页面&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-1%e8%bf%9b%e5%85%a5%e6%95%b0%e6%8d%ae%e7%ae%a1%e7%90%86%e9%a1%b5%e9%9d%a2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据&lt;/strong&gt; → &lt;strong&gt;数据管理&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据管理&lt;/strong&gt;。&lt;/p&gt;
 &lt;h4 id="步骤-2创建数据集"&gt;步骤 2：创建数据集&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-2%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e9%9b%86" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;点击右上角 &lt;strong&gt;创建数据集&lt;/strong&gt; 按钮。&lt;/p&gt;
 &lt;h4 id="步骤-3填写基本信息"&gt;步骤 3：填写基本信息&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-3%e5%a1%ab%e5%86%99%e5%9f%ba%e6%9c%ac%e4%bf%a1%e6%81%af" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
@@ -146,12 +194,7 @@
 &lt;li&gt;&lt;strong&gt;描述&lt;/strong&gt;：描述数据集的用途（可选）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;标签&lt;/strong&gt;：添加标签用于分类（可选）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id="步骤-4配置存储位置可选"&gt;步骤 4：配置存储位置（可选）&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-4%e9%85%8d%e7%bd%ae%e5%ad%98%e5%82%a8%e4%bd%8d%e7%bd%ae%e5%8f%af%e9%80%89" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;数据源&lt;/strong&gt;：数据来源（可选）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;目标位置&lt;/strong&gt;：存储路径（可选）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id="步骤-5创建数据集"&gt;步骤 5：创建数据集&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-5%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e9%9b%86" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id="步骤-4创建数据集"&gt;步骤 4：创建数据集&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-4%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e9%9b%86" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;点击 &lt;strong&gt;创建&lt;/strong&gt; 按钮完成创建。&lt;/p&gt;</description></item><item><title>数据清洗</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-cleansing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-cleansing/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;数据清洗模块提供强大的数据处理能力，帮助您清洗、转换和优化数据质量。&lt;/p&gt;
 
@@ -287,7 +330,7 @@
 &lt;h2 id="快速开始"&gt;快速开始&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-创建清洗任务"&gt;1. 创建清洗任务&lt;a class="td-heading-self-link" href="#1-%e5%88%9b%e5%bb%ba%e6%b8%85%e6%b4%97%e4%bb%bb%e5%8a%a1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="步骤-1进入数据清洗页面"&gt;步骤 1：进入数据清洗页面&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-1%e8%bf%9b%e5%85%a5%e6%95%b0%e6%8d%ae%e6%b8%85%e6%b4%97%e9%a1%b5%e9%9d%a2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据&lt;/strong&gt; → &lt;strong&gt;数据清洗&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>数据标注</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-annotation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-annotation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据处理&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>数据标注</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-annotation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-annotation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;数据标注模块集成 Label Studio，提供专业级的数据标注能力。&lt;/p&gt;
 
 &lt;/div&gt;
@@ -415,7 +458,7 @@
 &lt;/ul&gt;
 &lt;h3 id="2-创建标注任务"&gt;2. 创建标注任务&lt;a class="td-heading-self-link" href="#2-%e5%88%9b%e5%bb%ba%e6%a0%87%e6%b3%a8%e4%bb%bb%e5%8a%a1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="步骤-1进入数据标注页面"&gt;步骤 1：进入数据标注页面&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-1%e8%bf%9b%e5%85%a5%e6%95%b0%e6%8d%ae%e6%a0%87%e6%b3%a8%e9%a1%b5%e9%9d%a2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据&lt;/strong&gt; → &lt;strong&gt;数据标注&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>数据合成</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-synthesis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-synthesis/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据标注&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>数据合成</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-synthesis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-synthesis/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;数据合成模块利用大模型能力，自动生成高质量的训练数据，降低数据采集成本。&lt;/p&gt;
 
 &lt;/div&gt;
@@ -432,7 +475,7 @@
 &lt;h2 id="快速开始"&gt;快速开始&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-创建指令模板"&gt;1. 创建指令模板&lt;a class="td-heading-self-link" href="#1-%e5%88%9b%e5%bb%ba%e6%8c%87%e4%bb%a4%e6%a8%a1%e6%9d%bf" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="步骤-1进入数据合成页面"&gt;步骤 1：进入数据合成页面&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-1%e8%bf%9b%e5%85%a5%e6%95%b0%e6%8d%ae%e5%90%88%e6%88%90%e9%a1%b5%e9%9d%a2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据&lt;/strong&gt; → &lt;strong&gt;数据合成&lt;/strong&gt; → &lt;strong&gt;任务&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据合成&lt;/strong&gt; → &lt;strong&gt;合成任务&lt;/strong&gt;。&lt;/p&gt;
 &lt;h4 id="步骤-2创建指令模板"&gt;步骤 2：创建指令模板&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-2%e5%88%9b%e5%bb%ba%e6%8c%87%e4%bb%a4%e6%a8%a1%e6%9d%bf" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;点击 &lt;strong&gt;指令模板&lt;/strong&gt; 标签&lt;/li&gt;
@@ -466,7 +509,15 @@
  &amp;#34;answer&amp;#34;: &amp;#34;...&amp;#34;
  }
 ]
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;参数配置&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>数据评估</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-evaluation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;参数配置&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;模型&lt;/strong&gt;：选择使用的大模型（GPT-4、Claude、本地模型等）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;温度&lt;/strong&gt;：控制生成随机性（0-1）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最大 tokens&lt;/strong&gt;：限制生成长度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;其他参数&lt;/strong&gt;：根据模型配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="步骤-4保存模板"&gt;步骤 4：保存模板&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-4%e4%bf%9d%e5%ad%98%e6%a8%a1%e6%9d%bf" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;点击 &lt;strong&gt;保存&lt;/strong&gt; 按钮保存模板。&lt;/p&gt;</description></item><item><title>数据评估</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/data-evaluation/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;数据评估模块提供多维度数据质量评估能力，帮助您了解和提升数据质量。&lt;/p&gt;
 
 &lt;/div&gt;
@@ -582,7 +633,7 @@
 &lt;h2 id="快速开始"&gt;快速开始&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-创建评估任务"&gt;1. 创建评估任务&lt;a class="td-heading-self-link" href="#1-%e5%88%9b%e5%bb%ba%e8%af%84%e4%bc%b0%e4%bb%bb%e5%8a%a1" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="步骤-1进入数据评估页面"&gt;步骤 1：进入数据评估页面&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-1%e8%bf%9b%e5%85%a5%e6%95%b0%e6%8d%ae%e8%af%84%e4%bc%b0%e9%a1%b5%e9%9d%a2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据&lt;/strong&gt; → &lt;strong&gt;数据评估&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>知识库管理</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/knowledge-base/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/knowledge-base/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据评估&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>知识库管理</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/knowledge-base/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/knowledge-base/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;知识库管理模块帮助您构建企业知识库，实现高效的向量检索和 RAG 应用。&lt;/p&gt;
 
 &lt;/div&gt;
@@ -641,7 +692,7 @@
 &lt;h2 id="快速开始"&gt;快速开始&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-创建知识库"&gt;1. 创建知识库&lt;a class="td-heading-self-link" href="#1-%e5%88%9b%e5%bb%ba%e7%9f%a5%e8%af%86%e5%ba%93" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="步骤-1进入知识库页面"&gt;步骤 1：进入知识库页面&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-1%e8%bf%9b%e5%85%a5%e7%9f%a5%e8%af%86%e5%ba%93%e9%a1%b5%e9%9d%a2" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据&lt;/strong&gt; → &lt;strong&gt;知识库&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;知识生成&lt;/strong&gt;。&lt;/p&gt;
 &lt;h4 id="步骤-2创建知识库"&gt;步骤 2：创建知识库&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-2%e5%88%9b%e5%bb%ba%e7%9f%a5%e8%af%86%e5%ba%93" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;点击右上角 &lt;strong&gt;创建知识库&lt;/strong&gt; 按钮。&lt;/p&gt;
 &lt;h4 id="步骤-3配置基本信息"&gt;步骤 3：配置基本信息&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-3%e9%85%8d%e7%bd%ae%e5%9f%ba%e6%9c%ac%e4%bf%a1%e6%81%af" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
@@ -784,7 +835,7 @@
 &lt;h2 id="快速开始"&gt;快速开始&lt;a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="1-浏览算子"&gt;1. 浏览算子&lt;a class="td-heading-self-link" href="#1-%e6%b5%8f%e8%a7%88%e7%ae%97%e5%ad%90" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id="步骤-1进入算子市场"&gt;步骤 1：进入算子市场&lt;a class="td-heading-self-link" href="#%e6%ad%a5%e9%aa%a4-1%e8%bf%9b%e5%85%a5%e7%ae%97%e5%ad%90%e5%b8%82%e5%9c%ba" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;数据&lt;/strong&gt; → &lt;strong&gt;算子市场&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>流水线编排</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/orchestration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/orchestration/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;在左侧导航栏选择 &lt;strong&gt;算子市场&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>流水线编排</title><link>https://modelengine-group.github.io/datamate-docs/docs/user-guide/orchestration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://modelengine-group.github.io/datamate-docs/docs/user-guide/orchestration/</guid><description>&lt;div class="pageinfo pageinfo-primary"&gt;
 &lt;p&gt;流水线编排模块提供拖拽式可视化界面，帮助您设计和管理复杂的数据处理流程。&lt;/p&gt;
 
 &lt;/div&gt;
@@ -990,7 +1041,7 @@
 
 助手：根据知识库文档，创建数据清洗任务步骤如下：
 
-1. 进入数据清洗页面（数据 → 数据清洗）
+1. 进入数据处理页面
 2. 点击创建任务按钮
 3. 配置基本信息（任务名称、源数据集、输出数据集）
 4. 配置清洗流程（拖拽算子到画布）
